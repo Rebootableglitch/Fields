@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SplitDirt.label>Verarbeite Dreck zu Sand und Lehm</SplitDirt.label>
+  <SplitDirt.description>Verarbeite 1x Dreck zu 1x Sand und 1x Lehm.</SplitDirt.description>
+  <SplitDirt.jobString>Verarbeitet Dreck.</SplitDirt.jobString>
+
+  <SplitDirtBulk.label>Verarbeite Dreck zu Sand und Lehm in Massen</SplitDirtBulk.label>
+  <SplitDirtBulk.description>Verarbeite 5x Dreck zu 5x Sand und 5x Lehm</SplitDirtBulk.description>
+  <SplitDirtBulk.jobString>Verarbeitet Dreck.</SplitDirtBulk.jobString>
+
+  <DirtToClay.label>Verarbeite Dreck zu Lehm</DirtToClay.label>
+  <DirtToClay.description>Verarbeite 1x Dreck zu 2x Lehm.</DirtToClay.description>
+  <DirtToClay.jobString>Verarbeitet Dreck.</DirtToClay.jobString>
+
+  <DirtToClayBulk.label>Verarbeite Dreck zu Lehm in Massen</DirtToClayBulk.label>
+  <DirtToClayBulk.description>Verarbeite 5x Dreck zu 10x Lehm.</DirtToClayBulk.description>
+  <DirtToClayBulk.jobString>Verarbeitet Dreck.</DirtToClayBulk.jobString>
+
+  <MakeCrushedRocks.label>Zerkleinere Steinbrocken</MakeCrushedRocks.label>
+  <MakeCrushedRocks.description>Zerkleinere 1x Steinbrocken zu 2x Schotter.</MakeCrushedRocks.description>
+  <MakeCrushedRocks.jobString>Zerkleinert Steinbrocken.</MakeCrushedRocks.jobString>
+
+  <MakeCrushedRocksBulk.label>Zerkleinere Steinbrocken in Massen</MakeCrushedRocksBulk.label>
+  <MakeCrushedRocksBulk.description>Zerkleinere 5x Steinbrocken zu 10x Schotter.</MakeCrushedRocksBulk.description>
+  <MakeCrushedRocksBulk.jobString>Zerkleinert Steinbrocken.</MakeCrushedRocksBulk.jobString>
+
+  <MakeCrushedRocksBlock.label>Zerkleinere Steinblöcke</MakeCrushedRocksBlock.label>
+  <MakeCrushedRocksBlock.description>Zerkleinere 10 Steinblöcke zu 1x Schotter.</MakeCrushedRocksBlock.description>
+  <MakeCrushedRocksBlock.jobString>Zerkleinert Steinblöcke.</MakeCrushedRocksBlock.jobString>
+
+  <MakeCrushedRocksBlockBulk.label>Zerkleinere Steinblöcke in Massen</MakeCrushedRocksBlockBulk.label>
+  <MakeCrushedRocksBlockBulk.description>Zerkleinere 100 Steinblöcke zu 10x Schotter.</MakeCrushedRocksBlockBulk.description>
+  <MakeCrushedRocksBlockBulk.jobString>Zerkleinert Steinblöcke.</MakeCrushedRocksBlockBulk.jobString>
+
+  <MakeSand.label>Verarbeite Schotter zu Sand</MakeSand.label>
+  <MakeSand.description>Verarbeite 1x Schotter zu 1x Sand.</MakeSand.description>
+  <MakeSand.jobString>Verarbeitet Schotter.</MakeSand.jobString>
+
+  <MakeSandBulk.label>Verarbeite Schotter zu Sand in Massen</MakeSandBulk.label>
+  <MakeSandBulk.description>Verarbeite 5x Schotter zu 5x Sand.</MakeSandBulk.description>
+  <MakeSandBulk.jobString>Verarbeite Schotter.</MakeSandBulk.jobString>
+
+  <MakeClay.label>Verarbeite Sand zu Lehm</MakeClay.label>
+  <MakeClay.description>Verarbeite 1x Sand zu 1x Lehm.</MakeClay.description>
+  <MakeClay.jobString>Verarbeitet Sand.</MakeClay.jobString>
+
+  <MakeClayBulk.label>Verarbeite Sand zu Lehm in Massen</MakeClayBulk.label>
+  <MakeClayBulk.description>Verarbeite 5x Sand zu 5x Lehm.</MakeClayBulk.description>
+  <MakeClayBulk.jobString>Verarbeitet Sand.</MakeClayBulk.jobString>
+
+  <MakeDirt.label>Stelle Dreck her</MakeDirt.label>
+  <MakeDirt.description>Erzeuge 2x Dreck aus 1x Sand, 1x Lehm und 1x Dünger.</MakeDirt.description>
+  <MakeDirt.jobString>Stellt Dreck her.</MakeDirt.jobString>
+
+  <MakeDirtBulk.label>Stelle Dreck in Massen her</MakeDirtBulk.label>
+  <MakeDirtBulk.description>Erzeuge 10x Dreck aus 5x Sand, 5x Lehm und 5x Dünger.</MakeDirtBulk.description>
+  <MakeDirtBulk.jobString>Stellt Dreck her.</MakeDirtBulk.jobString>
+
+  <MakeCompost.label>Stelle Rohkompost her</MakeCompost.label>
+  <MakeCompost.description>Stelle Rohkompost aus organischen Abfällen (rohem Fleisch oder Pflanzen) her.</MakeCompost.description>
+  <MakeCompost.jobString>Stellt Rohkompost her.</MakeCompost.jobString>
+
+  <MakeCompost5.label>Stelle 5 Rohkompost her</MakeCompost5.label>
+  <MakeCompost5.description>Stelle 5x Rohkompost aus organischen Abfällen (rohem Fleisch oder Pflanzen) her.</MakeCompost5.description>
+  <MakeCompost5.jobString>Stellt Rohkompost her.</MakeCompost5.jobString>
+
+  <CompostCorpse.label>Verbrenne Leiche zu Rohkompost</CompostCorpse.label>
+  <CompostCorpse.description>Verbrenne eine Leiche zu Rohkompost.</CompostCorpse.description>
+  <CompostCorpse.jobString>Verbrennt Leiche.</CompostCorpse.jobString>
+
+  <CompostCorpseCampfire.label>Verbrenne Leiche zu Rohkompost</CompostCorpseCampfire.label>
+  <CompostCorpseCampfire.description>Verbrenne eine Leiche zu Rohkompost. Weniger effizient als in einem Krematorium.</CompostCorpseCampfire.description>
+  <CompostCorpseCampfire.jobString>Verbrennt Leiche.</CompostCorpseCampfire.jobString>
+
+  <MakeBricks.label>Stelle 12 Ziegelsteine her</MakeBricks.label>
+  <MakeBricks.description>Verarbeite Lehm zu Ziegelsteinen.</MakeBricks.description>
+  <MakeBricks.jobString>Stellt Ziegelsteine her.</MakeBricks.jobString>
+
+  <MakeFastBricks.label>Stelle 24 Ziegelsteine her</MakeFastBricks.label>
+  <MakeFastBricks.description>Verarbeite Lehm zu Ziegelsteinen.</MakeFastBricks.description>
+  <MakeFastBricks.jobString>Stellt Ziegelsteine her.</MakeFastBricks.jobString>
+
+
+</LanguageData>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RawCompost.label>Rohkompost</RawCompost.label>
+  <RawCompost.description>Eine Mischung aus Lebensmittelabfällen. Eher ekelhaft, aber nützlich, wenn du Dünger herstellen möchtest.</RawCompost.description>
+
+  <Fertilizer.label>Dünger</Fertilizer.label>
+  <Fertilizer.description>Dünger verbessert den Boden, um das Wachstum von Pflanzen zu beschleunigen.</Fertilizer.description>
+
+  <CrushedRocks.label>Schotter</CrushedRocks.label>
+  <CrushedRocks.description>Steinbrocken oder Steinblöcke, die in kleinere Stücke zerbrochen wurden.</CrushedRocks.description>
+
+  <PileofDirt.label>Dreck</PileofDirt.label>
+  <PileofDirt.description>Dreck der aus dem Boden extrahiert wurde.</PileofDirt.description>
+
+  <SandPile.label>Sand</SandPile.label>
+  <SandPile.description>Sand, möglicherweise aus einer Wüste oder einem Strand extrahiert.</SandPile.description>
+
+  <RFFClay.label>Lehm</RFFClay.label>
+  <RFFClay.description>Kann geformt und gebrannt werden, um Ziegelsteine herzustellen oder könnte mit Sand und Dünger gemischt werden, um guten Dreck zu erzeugen.</RFFClay.description>
+
+  <PlantScraps.label>Pflanzenreste</PlantScraps.label>
+  <PlantScraps.description>Zweige, Äste und Blätter von Schnittpflanzen. Nützlich für die Herstellung von Kompost oder vielleicht zum Füttern von Tieren.</PlantScraps.description>
+
+  <RottedMush.label>Verrotteter Brei</RottedMush.label>
+  <RottedMush.description>Was auch immer das früher war, es ist jetzt nur noch ein ekelhafter Haufen Verrotteter Brei. Kann nur noch für die Kompostierung verwendet werden.</RottedMush.description>
+
+  <RFFBricks.label>Ziegelsteine</RFFBricks.label>
+  <RFFBricks.description>Klassische Ziegelsteine herstellt aus gebranntem Lehm.</RFFBricks.description>
+  <RFFBricks.stuffProps.stuffAdjective>Ziegelsteine</RFFBricks.stuffProps.stuffAdjective>
+
+
+</LanguageData>

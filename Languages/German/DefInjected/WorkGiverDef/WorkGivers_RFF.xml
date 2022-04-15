@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FillCompostBarrel.label>Fülle Kompostfass</FillCompostBarrel.label>
+  <FillCompostBarrel.verb>Füllen</FillCompostBarrel.verb>
+  <FillCompostBarrel.gerund>Füllt</FillCompostBarrel.gerund>
+
+  <EmptyCompostBarrel.label>Entnehme Dünger aus einem Kompostfass</EmptyCompostBarrel.label>
+  <EmptyCompostBarrel.verb>Entnehme Dünger</EmptyCompostBarrel.verb>
+  <EmptyCompostBarrel.gerund>Entnehme Dünger aus</EmptyCompostBarrel.gerund>
+
+  <DoBillsUseRockMill.label>Arbeite an Elektrischer Steinmühle</DoBillsUseRockMill.label>
+  <DoBillsUseRockMill.verb>Arbeiten</DoBillsUseRockMill.verb>
+  <DoBillsUseRockMill.gerund>Arbeite an</DoBillsUseRockMill.gerund>
+
+  <ConstructFinishFramesGrowing.label>Boden Pflügen und Düngen</ConstructFinishFramesGrowing.label>
+  <ConstructFinishFramesGrowing.verb>Bauen</ConstructFinishFramesGrowing.verb>
+  <ConstructFinishFramesGrowing.gerund>Baut</ConstructFinishFramesGrowing.gerund>
+
+  <ConstructDeliverResourcesToBlueprintsGrowing.label>Trage Ressourcen zur Bodenverbesserung</ConstructDeliverResourcesToBlueprintsGrowing.label>
+  <ConstructDeliverResourcesToBlueprintsGrowing.verb>Trage zu</ConstructDeliverResourcesToBlueprintsGrowing.verb>
+  <ConstructDeliverResourcesToBlueprintsGrowing.gerund>Trägt zu</ConstructDeliverResourcesToBlueprintsGrowing.gerund>
+
+  <ConstructFinishFramesTerraforming.label>Gelände umwandeln</ConstructFinishFramesTerraforming.label>
+  <ConstructFinishFramesTerraforming.verb>Bauen</ConstructFinishFramesTerraforming.verb>
+  <ConstructFinishFramesTerraforming.gerund>Baut</ConstructFinishFramesTerraforming.gerund>
+
+  <ConstructDeliverResourcesToBlueprintsTerraforming.label>Trage Ressourcen zur Geländeumwandlung</ConstructDeliverResourcesToBlueprintsTerraforming.label>
+  <ConstructDeliverResourcesToBlueprintsTerraforming.verb>Trage zu</ConstructDeliverResourcesToBlueprintsTerraforming.verb>
+  <ConstructDeliverResourcesToBlueprintsTerraforming.gerund>Trägt zu</ConstructDeliverResourcesToBlueprintsTerraforming.gerund>
+
+
+</LanguageData>

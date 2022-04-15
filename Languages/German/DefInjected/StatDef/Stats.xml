@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FarmConstructionSpeed.label>Sähgeschwindigkeit</FarmConstructionSpeed.label>
+  <FarmConstructionSpeed.description>Die Geschwindigkeit, mit der diese Person den Boden befruchtet und pflügt.</FarmConstructionSpeed.description>
+
+  <FarmConstructSuccessChance.label>Säherfolgschance</FarmConstructSuccessChance.label>
+  <FarmConstructSuccessChance.description>Die Chance, dass es dieser Person gelingt, den Boden zu düngen oder zu pflügen.\nFehler bedeuteen Zeit- und Ressourcenverschwendung.</FarmConstructSuccessChance.description>
+
+
+</LanguageData>

@@ -1,0 +1,594 @@
+<Patch>
+
+	<!-- Venilla Furniture Expanded - Production -->
+
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName = "VFE_TableStonecutterElectric"]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName = "RockMill"]/designationCategory</xpath>
+		</match>
+	</Operation>
+
+	<!-- "TropiCKAPP" Modifications -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/TerrainDef[defName = "CK_PackedDirt"]</xpath>
+			<value>
+				<designationCategory></designationCategory>
+				<layerable>false</layerable>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+
+	<!-- "Concrete" Modifications -->
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName = "BrickEmbrasure"]/costList</xpath>
+		<value>
+			<RFFBricks>4</RFFBricks>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName = "BrickEmbrasure"]/designationCategory</xpath>
+		<value>
+			<designationCategory>Security</designationCategory>
+		</value>
+	</Operation>
+	
+	<!-- Terrain Affordance Adds -->
+	
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "Crashland_Wasteland"]/affordances</xpath>
+		<value>
+			<li>Sand</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "DecrystallizedSand"]/affordances</xpath>
+		<value>
+			<li>Sand</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_Sand"]/affordances</xpath>
+		<value>
+			<li>Sand</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "QRY_ReclaimedSoil"]/affordances</xpath>
+		<value>
+			<li>Gravel</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "DecrystallizedSoil"]/affordances</xpath>
+		<value>
+			<li>Gravel</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "NightSoil"]/affordances</xpath>
+		<value>
+			<li>SoilMarshy</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "CK_PackedDirt"]/affordances</xpath>
+		<value>
+			<li>PackedDirt</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "SandstoneSoil"]/affordances</xpath>
+		<value>
+			<li>RockySoil</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "GraniteSoil"]/affordances</xpath>
+		<value>
+			<li>RockySoil</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "LimestoneSoil"]/affordances</xpath>
+		<value>
+			<li>RockySoil</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "SlateSoil"]/affordances</xpath>
+		<value>
+			<li>RockySoil</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "MarbleSoil"]/affordances</xpath>
+		<value>
+			<li>RockySoil</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_ColdSpringsWater"]/affordances</xpath>
+		<value>
+			<li>WaterShallow</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_HotSpringsWater"]/affordances</xpath>
+		<value>
+			<li>WaterShallow</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_Ice"]/affordances</xpath>
+		<value>
+			<li>Ice</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_MuddyIce"]/affordances</xpath>
+		<value>
+			<li>Ice</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_SoilWet"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_SoilWetRich"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+			<li>SoilRich</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "TKKN_RiverDeposit"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+			<li>SoilRich</li>
+		</value>
+	</Operation>
+	
+	<!-- Sand for Glass -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "MakeGlass"]/ingredients</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "MakeGlass"]</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SandPile</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "MakeGlass"]/fixedIngredientFilter</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "MakeGlass"]</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>SandPile</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "MakeCircularGlass"]/ingredients</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "MakeCircularGlass"]</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SandPile</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "MakeCircularGlass"]/fixedIngredientFilter</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "MakeCircularGlass"]</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>SandPile</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "SmeltGlass"]/ingredients</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "SmeltGlass"]</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SandPile</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "SmeltGlass"]/fixedIngredientFilter</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "SmeltGlass"]</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>SandPile</li>
+							<li>Steel</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+<!-- ========== LWM's Deep Storage ================= -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+					<value>
+						<li>PlantScraps</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter</xpath>
+					<value>
+						<thingDefs>
+							<li>PlantScraps</li>
+						</thingDefs>
+					</value>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="LWM_Pallet_Covered"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+				<value>
+					<li>PlantScraps</li>
+				</value>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="LWM_Pallet_Covered"]/building/fixedStorageSettings/filter/thingDefs/Hay</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="LWM_Pallet_Covered"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+					<value>
+						<li>PlantScraps</li>
+					</value>
+				</nomatch>
+			</li>
+		</operations>
+	</Operation>
+
+<!-- Dub's Hygiene -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Biosolids"]</xpath>
+		<success>Always</success>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="ResourceBase_RFF">
+							<defName>D9Ash</defName>
+							<label>ash</label>
+							<description>A pile of burnt organic compounds of various types, producing a fine gray powder. Has enough nutrients to act as a filler for fertilizer.</description>
+							<graphicData>
+								<texPath>Item/Ash</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<DeteriorationRate>2</DeteriorationRate>
+								<MarketValue>0.3</MarketValue>
+								<Mass>0.5</Mass>
+							</statBases>
+							<thingCategories>
+								<li>ResourcesRaw</li>
+							</thingCategories>
+							<tradeability>None</tradeability>
+						</ThingDef>
+						<RecipeDef>
+							<defName>Make_FertilizerFromBiosolids</defName>
+							<label>make fertilizer from biosolids</label>
+							<description>Pasteurize biosolids into proper fertilizer.</description>
+							<jobString>Pasteurizing biosolids.</jobString>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<workAmount>160</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Biosolids</li>
+										</thingDefs>
+									</filter>
+									<count>4</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Biosolids</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<Fertilizer>1</Fertilizer>
+							</products>
+							<recipeUsers>
+								<li>ElectricCrematorium</li>
+							</recipeUsers>
+						</RecipeDef>
+						<RecipeDef>
+							<defName>Make_FertilizerFromBiosolidsBulk</defName>
+							<label>make fertilizer from biosolids in bulk</label>
+							<description>Pasteurize biosolids into proper fertilizer.</description>
+							<jobString>Pasteurizing biosolids in bulk.</jobString>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<workAmount>1600</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Biosolids</li>
+										</thingDefs>
+									</filter>
+									<count>40</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Biosolids</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<Fertilizer>10</Fertilizer>
+							</products>
+							<recipeUsers>
+								<li>ElectricCrematorium</li>
+							</recipeUsers>
+						</RecipeDef>
+						<RecipeDef>
+							<defName>Make_Ash2</defName>
+							<label>make ash from fecal sludge</label>
+							<description>Make one pile of ash from half a barrel of fecal sludge.</description>
+							<jobString>Burning fecal sludge.</jobString>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Cremate</soundWorking>
+							<workAmount>875</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>FecalSludge</li>
+										</thingDefs>
+									</filter>
+									<count>75</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>FecalSludge</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<D9Ash>1</D9Ash>
+							</products>
+							<recipeUsers>
+								<li>ElectricCrematorium</li>
+								<li>BurnPit</li>
+							</recipeUsers>
+						</RecipeDef>
+						<RecipeDef>
+							<defName>Make_Ash12</defName>
+							<label>make ash from fecal sludge in bulk</label>
+							<description>Make six piles of ash from three barrels of fecal sludge.</description>
+							<jobString>Burning fecal sludge in bulk.</jobString>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Cremate</soundWorking>
+							<workAmount>4200</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>FecalSludge</li>
+										</thingDefs>
+									</filter>
+									<count>450</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>FecalSludge</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<D9Ash>6</D9Ash>
+							</products>
+							<recipeUsers>
+								<li>ElectricCrematorium</li>
+								<li>BurnPit</li>
+							</recipeUsers>
+						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+<Operation Class="PatchOperationFindMod">
+    <mods><li>Dubs Bad Hygiene</li></mods> <!-- [sic] -->
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/RecipeDef[defName="CompostCorpseCampfire"]/recipeUsers</xpath>
+      <value>
+        <li>BurnPit</li>
+      </value>
+    </match>
+</Operation>
+
+<!-- Add'l misc compatibility courtesy Thels -->
+
+<!-- Electric Butcher Table - Production -->
+
+<Operation Class="PatchOperationConditional">
+	<success>Always</success>
+	<xpath>Defs/ThingDef[defName = "ElectricTableButcher"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RecipeDef/recipeUsers/li[text()="TableButcher"]</xpath>
+		<value>
+			<li>ElectricTableButcher</li>
+		</value>
+	</match>
+</Operation>
+
+<!-- Electric Stonecutter Table - Production -->
+
+<Operation Class="PatchOperationConditional">
+	<success>Always</success>
+	<xpath>Defs/ThingDef[defName = "TableStonecutterElectric"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RecipeDef/recipeUsers/li[text()="TableStonecutter"]</xpath>
+		<value>
+			<li>TableStonecutterElectric</li>
+		</value>
+	</match>
+</Operation>
+
+<!-- SeedsPlease - modifies work priorities to avoid the sowing-over-designators problem -->
+
+<Operation Class="PatchOperationFindMod">
+	<mods><li>SeedsPlease</li></mods>
+	<success>Always</success>
+	<match Class="PatchOperationReplace">
+		<xpath>Defs/WorkGiverDef[defName="GrowerSow"]/priorityInType</xpath>
+		<value>
+			<priorityInType>20</priorityInType>
+		</value>
+	</match>
+</Operation>
+
+</Patch>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Gravel.label>Steinige Erde</Gravel.label>
+  <Ice.label>Eis</Ice.label>
+  <Marsh.label>Sumpf</Marsh.label>
+  <SoilMarshy.label>Sumpfige Erde</SoilMarshy.label>
+  <SoilF.label>Erde</SoilF.label>
+  <SoilRich.label>Gedüngte Erde</SoilRich.label>
+  <Mud.label>Schlamm</Mud.label>
+  <PackedDirt.label>Festgetretene Erde</PackedDirt.label>
+  <RockyDirt.label>Rauer Kies</RockyDirt.label>
+  <Sand.label>Sand</Sand.label>
+  <Topsoil.label>Mutterboden</Topsoil.label>
+  <WaterDeep.label>Tiefes Wasser</WaterDeep.label>
+  <WaterShallow.label>Flaches Wasser</WaterShallow.label>
+  <RoughStone.label>Rauer oder Glatter Stein</RoughStone.label>
+  <SmoothStone.label>Glatter Stein oder Eis</SmoothStone.label>
+
+
+</LanguageData>

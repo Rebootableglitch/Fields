@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="FloorBase">
+		<defName>BrickFloor</defName>
+		<label>brick floor</label>
+		<costList>
+			<RFFBricks>3</RFFBricks>
+		</costList>
+		<renderPrecedence>220</renderPrecedence>
+		<description>Clay bricks laid out to make a nice flooring.</description>
+		<texturePath>Stuff/RFF_TileBricks</texturePath>
+		<statBases>
+			<WorkToBuild>400</WorkToBuild>
+			<Beauty>1</Beauty>
+		</statBases>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<defName>HBBrickFloor</defName>
+		<label>herringbone brick floor</label>
+		<costList>
+			<RFFBricks>4</RFFBricks>
+		</costList>
+		<renderPrecedence>220</renderPrecedence>
+		<description>Clay bricks laid out in a fancy herringbone pattern. A bit more work than a standard brick floor, but also a bit more attractive.</description>
+		<texturePath>Stuff/RFF_HerringboneBricks</texturePath>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Beauty>2</Beauty>
+		</statBases>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RockySoil</defName>
+		<label>rough gravel</label>
+		<texturePath>Stuff/RFF_RockyDirt</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>320</renderPrecedence>
+		<pathCost>3</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Diggable</li>
+			<li>RockyDirt</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints> 
+		<tools>
+			<li>
+				<label>gravel</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>GravelInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>TrenchShallow</defName>
+		<label>shallow trench</label>
+		<texturePath>Stuff/RFF_RockyDirt</texturePath>
+		<color>(126,126,126)</color>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>325</renderPrecedence>
+		<pathCost>4</pathCost>
+		<statBases>
+			<Beauty>-3</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>WaterShallow</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints> 
+		<avoidWander>true</avoidWander>
+		<tools>
+			<li>
+				<label>gravel</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>GravelInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="RFF_Code.TerraformTrench">
+				<riverTerrain>WaterMovingShallow</riverTerrain>
+				<oceanTerrain>WaterOceanShallow</oceanTerrain>
+				<lakeTerrain>WaterShallow</lakeTerrain>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>TrenchMuddy</defName>
+		<label>muddy trench</label>
+		<texturePath>Terrain/Surfaces/Mud</texturePath>
+		<color>(126,126,126)</color>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>326</renderPrecedence>
+		<pathCost>3</pathCost>
+		<statBases>
+			<Beauty>-4</Beauty>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>Marsh</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints> 
+		<avoidWander>true</avoidWander>
+		<tools>
+			<li>
+				<label>mud</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>MudInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="RFF_Code.TerraformTrench">
+				<riverTerrain>Marsh</riverTerrain>
+				<oceanTerrain>Marsh</oceanTerrain>
+				<lakeTerrain>Marsh</lakeTerrain>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>TrenchDeep</defName>
+		<label>deep trench</label>
+		<texturePath>Stuff/RFF_RockyDirt</texturePath>
+		<color>(48,48,48)</color>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>328</renderPrecedence>
+		<pathCost>8</pathCost>
+		<statBases>
+			<Beauty>-3</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>WaterDeep</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints> 
+		<avoidWander>true</avoidWander>
+		<tools>
+			<li>
+				<label>gravel</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>GravelInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="RFF_Code.TerraformTrench">
+				<riverTerrain>WaterMovingChestDeep</riverTerrain>
+				<oceanTerrain>WaterOceanDeep</oceanTerrain>
+				<lakeTerrain>WaterDeep</lakeTerrain>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Topsoil</defName>
+		<label>topsoil</label>
+		<texturePath>Terrain/Surfaces/Soil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<layerable>true</layerable>
+		<statBases>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+			<li>Topsoil</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>1.0</fertility>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>DirtFert</defName>
+		<label>fertilized topsoil</label>
+		<texturePath>Terrain/Surfaces/SoilRich</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>335</renderPrecedence>
+		<pathCost>2</pathCost>
+		<layerable>true</layerable>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<WorkToBuild>250</WorkToBuild>
+		</statBases>
+		<scatterType></scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>1.4</fertility>
+		<takeFootprints>True</takeFootprints>
+		<modExtensions>
+			<li Class="RFF_Code.DepletableSoil">
+				<terrain>Topsoil</terrain>
+				<replanterDef>Terraform_Topsoil-DirtFert</replanterDef>
+				<mtbDays>4</mtbDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>SoilTilled</defName>
+		<label>tilled soil</label>
+		<texturePath>Stuff/RFF_SoilTilled</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>333</renderPrecedence>
+		<pathCost>5</pathCost>
+		<layerable>true</layerable>
+		<statBases>
+			<Beauty>0</Beauty>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<scatterType></scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>1.8</fertility>
+		<takeFootprints>True</takeFootprints>
+		<avoidWander>true</avoidWander>
+		<modExtensions>
+			<li Class="RFF_Code.DepletableSoil">
+				<terrain>SoilRich</terrain>
+				<replanterDef>Terraform_SoilRich-SoilTilled</replanterDef>
+				<mtbDays>10</mtbDays>
+				<returnToSoilFactor>0.5</returnToSoilFactor>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>SoilWorn</defName>
+    <label>worn-out soil</label>
+    <texturePath>Terrain/Surfaces/Gravel</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>300</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+      <li>SoilF</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0.7</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+</Defs>

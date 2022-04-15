@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FillCompostBarrel.reportString>Befülle TargetA.</FillCompostBarrel.reportString>
+  <EmptyCompostBarrel.reportString>Entnehme Dünger aus TargetA.</EmptyCompostBarrel.reportString>
+  <FinishFrameGrowing.reportString>Erstelle TargetA.</FinishFrameGrowing.reportString>
+  <FinishFrameConstruction.reportString>Erstelle TargetA.</FinishFrameConstruction.reportString>
+
+
+</LanguageData>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Brick Wall -->
+
+  <BrickWall.label>Ziegelsteinwand</BrickWall.label>
+  <BrickWall.description>Eine Mauer aus Lehmziegeln und Mörtel.</BrickWall.description>
+
+
+  <!-- Production -->
+
+  <RockMill.label>Elektrische Steinmühle</RockMill.label>
+  <RockMill.description>Eine elektrisch betriebene Mühle zum Zerkleinern und Mischen von Steinen, Sand und Schmutz. Viel schneller als manuelle Operationen am Tisch des Steinmetzes.</RockMill.description>
+
+  <Terraform_RockyDirt-Stone.label>Rauer Kies zu Rauer Stein</Terraform_RockyDirt-Stone.label>
+  <Terraform_RockyDirt-Stone.description>Platziere eine Schicht Kies, die zu einer rauen Steinoberfläche verdichtet werden kann. Nimmt viel Arbeit in Anspruch.\n\nPlatziere auf: Rauer Kies.\n\nErgebnis: Rauer Stein, der für das lokale Grundgestein geeignet ist.</Terraform_RockyDirt-Stone.description>
+
+  <Terraform_RockyDirt-RockyDirt.label>Rauer Kies zu Rauer Kies</Terraform_RockyDirt-RockyDirt.label>
+  <Terraform_RockyDirt-RockyDirt.description>Siebe Unregelmäßigkeiten aus unebenem Schottergelände heraus. Nützlich zum Räumen von mod-hinzugefügtem Gelände, das grobem Kies ähnelt.\n\nPlatziere auf: Raues Kiesäquivalent.\n\nErgebnis: Rauer Kies.</Terraform_RockyDirt-RockyDirt.description>
+
+  <Terraform_Sand-RockyDirt.label>Sand zu Rauer Kies</Terraform_Sand-RockyDirt.label>
+  <Terraform_Sand-RockyDirt.description>Siebe verwertbaren Sand aus dem Gelände und hinterlassen unbrauchbaren, unfruchtbaren, rauen Kies.\n\nPlatziere auf: Sand (oder weichen Sand).\n\nErgebnis: Rauer Kies.\n\nErträge: Sand x2.</Terraform_Sand-RockyDirt.description>
+
+  <Terraform_Gravel-RockyDirt.label>Steinige Erde zu Rauer Kies</Terraform_Gravel-RockyDirt.label>
+  <Terraform_Gravel-RockyDirt.description>Entferne das verwendbare Material von steiniger Erde und hinterlasse unbrauchbaren, unfruchtbaren rauen Kies.\n\nPlatziere auf: Steiniger Erde.\n\nErgebnis: Rauer Kies.\n\nErträge: Sand x2, Lehm x1, Schotter x1.</Terraform_Gravel-RockyDirt.description>
+
+  <Terraform_SoilF-RockyDirt.label>Erde zu Rauer Kies</Terraform_SoilF-RockyDirt.label>
+  <Terraform_SoilF-RockyDirt.description>Entferne Dreck von fruchtbarer Erde und hinterlasse unbrauchbaren, unfruchtbaren rauen Kies.\n\nPlatziere auf: Jede Art von fruchtbarer Erde.\n\nErgebnis: Rauer Kies.\n\nErträge: Dreck x3.</Terraform_SoilF-RockyDirt.description>
+
+  <Terraform_SoilMarshy-RockyDirt.label>Sumpfige Erde zu Rauer Kies</Terraform_SoilMarshy-RockyDirt.label>
+  <Terraform_SoilMarshy-RockyDirt.description>Lasse verwertbares Material von sumpfigem Boden ab, wodurch unbrauchbarer, unfruchtbarer (aber trockener) Rauer Kies zurückbleibt.\n\nPlatziere auf: Sumpfige Erde.\n\nErgebnis: Rauer Kies.\n\nErträge: Dreck x2.</Terraform_SoilMarshy-RockyDirt.description>
+
+  <Terraform_Mud-RockyDirt.label>Schlamm zu Rauer Kies</Terraform_Mud-RockyDirt.label>
+  <Terraform_Mud-RockyDirt.description>Entferne und filtere nützlichen Dreck aus schlammigem Gelände und hinterlasse unbrauchbaren, unfruchtbaren (aber trockenen) rauen Kies.\n\nPlatziere auf: Schlamm.\n\nErgebnis: Rauer Kies.\n\nErträge: Dreck x1.</Terraform_Mud-RockyDirt.description>
+
+  <Terraform_Stone-RockyDirt.label>Stein zu Rauer Kies</Terraform_Stone-RockyDirt.label>
+  <Terraform_Stone-RockyDirt.description>Breche Steingelände in unfruchtbaren, rauen Kies auf, so dass es zu einem nützlichen Gelände weiter umgewandelt werden kann.\n\nPlatziere auf: Jede Art von rauem oder glattem Stein.\n\nErgebnis: Rauer Kies.\n\nErträge: Schotter x2.</Terraform_Stone-RockyDirt.description>
+
+  <Terraform_WaterShallow-RockyDirt.label>Flaches Wasser zu Rauer Kies</Terraform_WaterShallow-RockyDirt.label>
+  <Terraform_WaterShallow-RockyDirt.description>Fülle flaches Wasser mit rauem Kies, so dass es weiter zu einem nützlichen Gelände terraformiert werden kann.\n\nPlatziere auf: Jede Art von flachem Wasser.\n\nErgebnis: Rauer Kies.</Terraform_WaterShallow-RockyDirt.description>
+
+  <Terraform_Sand-Sand.label>Sand zu Sand</Terraform_Sand-Sand.label>
+  <Terraform_Sand-Sand.description>Entferne alle Unregelmäßigkeiten aus Sandgelände. Nützlich zum Reinigen von weichem Sand oder modifiziertem Gelände ähnlich wie Sand.\n\nPlatziere auf: Sandäquivalent.\n\nErgebnis: Sand.</Terraform_Sand-Sand.description>
+
+  <Terraform_RockyDirt-Sand.label>Rauer Kies zu Sand</Terraform_RockyDirt-Sand.label>
+  <Terraform_RockyDirt-Sand.description>Platziert Sand auf unebenem Schottergelände.\n\nPlatziere auf: Rauer Kies.\n\nErgebnis: Sand.</Terraform_RockyDirt-Sand.description>
+
+  <Terraform_Gravel-Sand.label>Steinige Erde zu Sand</Terraform_Gravel-Sand.label>
+  <Terraform_Gravel-Sand.description>Siebe steinigen Boden, entferne größere Steine ​​und Lehmklumpen und lasse nur feinen Sand zurück.\n\nPlatziere auf: Steiniger Erde.\n\nErgebnis: Sand.\n\nErträge: Lehm x1, Schotter x1.</Terraform_Gravel-Sand.description>
+
+  <Terraform_SoilF-Sand.label>Erde zu Sand</Terraform_SoilF-Sand.label>
+  <Terraform_SoilF-Sand.description>Breche die Erde auf und siebe fruchtbaren Boden, wobei feiner Sand zurückbleibt.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Sand.\n\nErträge: Dreck x1, Lehm x1, Schotter x1.</Terraform_SoilF-Sand.description>
+
+  <Terraform_WaterShallow-Sand.label>Flaches Wasser zu Sand</Terraform_WaterShallow-Sand.label>
+  <Terraform_WaterShallow-Sand.description>Fülle flaches Wasser mit Schotter und bedecke ihn mit Sand.\n\nPlatziere auf: Jede Art von flachem Wasser.\n\nErgebnis: Sand.</Terraform_WaterShallow-Sand.description>
+
+  <Terraform_Gravel-Gravel.label>Steinige Erde zu Steinige Erde</Terraform_Gravel-Gravel.label>
+  <Terraform_Gravel-Gravel.description>Entferne Unregelmäßigkeiten von steinigem Boden. Nützlich zum Räumen von mod-hinzugefügtem Gelände ähnlich wie steinigem Boden.\n\nPlatziere auf: steiniges Bodenäquivalent.\n\nErgebnis: Steinige Erde.</Terraform_Gravel-Gravel.description>
+
+  <Terraform_RockyDirt-Gravel.label>Rauer Kies zu Steinige Erde</Terraform_RockyDirt-Gravel.label>
+  <Terraform_RockyDirt-Gravel.description>Gewinne Steinige Erde aus Schotter, Lehm und Sand zurück und schafft so einen felsigen Boden mit geringer Fruchtbarkeit.\n\nPlatziere auf: Rauer Kies.\n\nErgebnis: Steinige Erde Boden.</Terraform_RockyDirt-Gravel.description>
+
+  <Terraform_Sand-Gravel.label>Sand zu Steinige Erde</Terraform_Sand-Gravel.label>
+  <Terraform_Sand-Gravel.description>Mische Schotter und Lehm zu Steiniger Erde, wodurch felsiger Boden mit geringer Fruchtbarkeit entsteht.\n\nPlatziere auf: Sand (oder weichen Sand).\n\nErgebnis: Steinige Erde.</Terraform_Sand-Gravel.description>
+
+  <Terraform_SoilF-Gravel.label>Erde zu Steinige Erde</Terraform_SoilF-Gravel.label>
+  <Terraform_SoilF-Gravel.description>Entferne wertvollen Dreck von fruchtbarem Boden, wodurch seine Fruchtbarkeit etwas verringert wird.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Steinige Erde.\n\nErtrag: Dreck x1.</Terraform_SoilF-Gravel.description>
+
+  <Terraform_SoilF-PackedDirt.label>Erde zu Festgetretene Erde</Terraform_SoilF-PackedDirt.label>
+  <Terraform_SoilF-PackedDirt.description>Verdichte Dreck zu einer harten Oberfläche, die für den Straßenbau geeignet ist. Festgetretene Erde verlangsamt die Kolonisten nicht, ist aber unfruchtbar. Sie kann relativ leicht zu fruchtbaren Boden umgewandelt werden.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Festgetretene Erde.</Terraform_SoilF-PackedDirt.description>
+
+  <Terraform_SoilF-SoilF.label>Erde zu Erde</Terraform_SoilF-SoilF.label>
+  <Terraform_SoilF-SoilF.description>Glättee Unregelmäßigkeiten im Boden. Nützlich zum Reinigen von Erde oder modifiziertem Gelände ähnlich wie Erde. Warnung: Entfernt Nährstoffreiche Erde.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Erde.</Terraform_SoilF-SoilF.description>
+
+  <Terraform_Sand-SoilF.label>Sand zu Erde</Terraform_Sand-SoilF.label>
+  <Terraform_Sand-SoilF.description>Mische Schotter, Lehm und Dreck in Sandgelände, um Erdn zum Anbau von Pflanzen zurückzugewinnen.\n\nPlatziere auf: Sand (oder weichen Sand).\n\nErgebnis: Erde.</Terraform_Sand-SoilF.description>
+
+  <Terraform_Gravel-SoilF.label>Steinige Erde zu Erde</Terraform_Gravel-SoilF.label>
+  <Terraform_Gravel-SoilF.description>Gewinne Erde mit frischem Dreck zurück, um die Fruchtbarkeit zu verbessern.\n\nPlatziere auf: Steinige Erde.\n\nErgebnis: Erde.</Terraform_Gravel-SoilF.description>
+
+  <Terraform_RockyDirt-SoilF.label>Rauer Kies zu Erde</Terraform_RockyDirt-SoilF.label>
+  <Terraform_RockyDirt-SoilF.description>Gewinne Erde mit viel frischem Dreck zurück, um den Boden fruchtbar zu machen.\n\nPlatziere auf: Rauer Kies.\n\nErgebnis: Erde.</Terraform_RockyDirt-SoilF.description>
+
+  <Terraform_PackedDirt-SoilF.label>Festgetretene Erde zu Erde</Terraform_PackedDirt-SoilF.label>
+  <Terraform_PackedDirt-SoilF.description>Breche Festgetretene Erde auf und hinterlasse fruchtbaren Boden.\n\nPlatziere auf: Festgetretene Erde.\n\nErgebnis: Erde.</Terraform_PackedDirt-SoilF.description>
+
+  <Terraform_Mud-SoilF.label>Schlamm zu Erde</Terraform_Mud-SoilF.label>
+  <Terraform_Mud-SoilF.description>Gewinne Erde mit frischem Dreck zurück und macht den Boden wieder fruchtbar.\n\nPlatziere auf: Schlamm.\n\nErgebnis: Erde.</Terraform_Mud-SoilF.description>
+
+  <Terraform_SoilMarshy-SoilF.label>Sumpfige Erde zu Erde</Terraform_SoilMarshy-SoilF.label>
+  <Terraform_SoilMarshy-SoilF.description>Gewinne Erde mit frischem Dreck zurück, um sich schneller fortbewegen zu können.\n\nPlatziere auf: Sumpfige Erde.\n\nErgebnis: Erde.</Terraform_SoilMarshy-SoilF.description>
+
+  <Terraform_Marsh-SoilF.label>Sumpf zu Erde</Terraform_Marsh-SoilF.label>
+  <Terraform_Marsh-SoilF.description>Gewinne Erde mit Dreck zurück und schafft trockenen und fruchtbaren Boden.\n\nPlatziere auf: Sumpf.\n\nErgebnis: Erde.</Terraform_Marsh-SoilF.description>
+
+  <Terraform_WaterShallow-SoilF.label>Flaches Wasser zu Erde</Terraform_WaterShallow-SoilF.label>
+  <Terraform_WaterShallow-SoilF.description>Fülle flaches Wasser mit Dreck, wodurch trockener und fruchtbarer Boden entsteht.\n\nPlatziere auf: Flaches Wasser.\n\nErgebnis: Erde.</Terraform_WaterShallow-SoilF.description>
+
+  <Terraform_Mud-Mud.label>Schlamm zu Schlamm</Terraform_Mud-Mud.label>
+  <Terraform_Mud-Mud.description>Entferne Unregelmäßigkeiten aus dem Schlamm. Nützlich zum Löschen von mod-hinzugefügtem Terrain ähnlich wie Schlamm.\n\nPlatziere auf: Schlammäquivalent.\n\nErgebnis: Schlamm.</Terraform_Mud-Mud.description>
+
+  <Terraform_SoilF-Mud.label>Erde zu Schlamm</Terraform_SoilF-Mud.label>
+  <Terraform_SoilF-Mud.description>Bewässere fruchtbaren Boden und erzeugt Schlamm, der keine Pflanzen oder Gebäude stützt, aber zur Verlangsamung von Angreifern verwendet werden kann.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Schlamm</Terraform_SoilF-Mud.description>
+
+  <Terraform_SoilMarshy-Mud.label>Sumpfige Erde zu Schlamm</Terraform_SoilMarshy-Mud.label>
+  <Terraform_SoilMarshy-Mud.description>Bearbeite sumpfige Erde, wodurch Schlamm entsteht.\n\nPlatziere auf: Sumpfige Erde.\n\nErgebnis: Schlamm.</Terraform_SoilMarshy-Mud.description>
+
+  <Terraform_Marsh-Mud.label>Sumpf zu Schlamm</Terraform_Marsh-Mud.label>
+  <Terraform_Marsh-Mud.description>Füge Grundgestein unterhalb des Sumpfes hinzu und erzeugt nassen, schlammigen, aber geringfügig festen Boden.\n\nPlatziere auf: Sumpf.\n\nErgebnis: Schlamm</Terraform_Marsh-Mud.description>
+
+  <Terraform_SoilMarshy-SoilMarshy.label>Sumpfige Erde zu Sumpfige Erde</Terraform_SoilMarshy-SoilMarshy.label>
+  <Terraform_SoilMarshy-SoilMarshy.description>Entfernt Unregelmäßigkeiten aus sumpfigem Boden. Nützlich, um mod-hinzugefügtes Gelände ähnlich wie sumpfigen Boden zu entfernen.\n\nPlatziere auf: sumpfigem Bodenäquivalent.\n\nErgebnis: sumpfiger Boden.\n\nErträge: Dreck x1.</Terraform_SoilMarshy-SoilMarshy.description>
+
+  <Terraform_SoilF-SoilMarshy.label>Erde zu Sumpfige Erde</Terraform_SoilF-SoilMarshy.label>
+  <Terraform_SoilF-SoilMarshy.description>Entferne Dreck aus fruchtbarem Boden und fügt stehendes Oberflächenwasser hinzu, um ein sumpfiges Gelände mit geringer Beweglichkeit zu schaffen.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Sumpfige Erde.\n\nErträge: Dreck x1.</Terraform_SoilF-SoilMarshy.description>
+
+  <Terraform_Mud-SoilMarshy.label>Schlamm zu Sumpfige Erde</Terraform_Mud-SoilMarshy.label>
+  <Terraform_Mud-SoilMarshy.description>Füge dem Schlamm Dreck hinzu, um einen weichen, sumpfigen, aber fruchtbaren Sumpfboden zu schaffen.\n\nPlatziere auf: Schlamm.\n\nErgebnis: Sumpfige Erde.</Terraform_Mud-SoilMarshy.description>
+
+  <Terraform_Marsh-SoilMarshy.label>Sumpf zu Sumpfige Erde</Terraform_Marsh-SoilMarshy.label>
+  <Terraform_Marsh-SoilMarshy.description>Füge dem Sumpf, Dreck und Grundgestein hinzu und erzeugt festen, aber immer noch feuchten Boden.\n\nPlatziere auf: Sumpf.\n\nErgebnis: Sumpfige Erde.</Terraform_Marsh-SoilMarshy.description>
+
+  <Terraform_SoilF-Marsh.label>Erde zu Sumpf</Terraform_SoilF-Marsh.label>
+  <Terraform_SoilF-Marsh.description>Grabe einen Teil des fruchtbaren Bodens aus und füllt den Rest mit schlammigem Wasser, um einen Sumpf zu schaffen.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Sumpf.\n\nErträge: Dreck x1, Lehm x5.</Terraform_SoilF-Marsh.description>
+
+  <Terraform_Mud-Marsh.label>Schlamm zu Sumpf</Terraform_Mud-Marsh.label>
+  <Terraform_Mud-Marsh.description>Grabe einen Teil des Schlamms aus und füllt den Rest mit schlammigem Wasser, um einen Sumpf zu erzeugen.\n\nPlatziere auf: Schlamm.\n\nErgebnis: Sumpf.\n\nErträge: Lehm x5.</Terraform_Mud-Marsh.description>
+
+  <Terraform_SoilMarshy-Marsh.label>Sumpfige Erde zu Sumpf</Terraform_SoilMarshy-Marsh.label>
+  <Terraform_SoilMarshy-Marsh.description>Grabe sumpfigen Boden aus, um einen Sumpf neben dem Oberflächenwasser (einschließlich anderer Sümpfe) zu erzeugen.\n\nPlatziere auf: Sumpfige Erde.\n\nErgebnis: Sumpf.\n\nErträge: Lehm x5.</Terraform_SoilMarshy-Marsh.description>
+
+  <Terraform_WaterShallow-Marsh.label>Flaches Wasser zu Sumpf</Terraform_WaterShallow-Marsh.label>
+  <Terraform_WaterShallow-Marsh.description>Fügt flachem Wasser Dreck und Schlick hinzu und wandelt es in einen Sumpf um.\n\nPlatziere auf: Flaches Wasser.\n\nErgebnis: Sumpf.</Terraform_WaterShallow-Marsh.description>
+
+  <Terraform_Sand-WaterShallow.label>Sand zu Flaches Wasser</Terraform_Sand-WaterShallow.label>
+  <Terraform_Sand-WaterShallow.description>Grabe Sand aus, um einen flachen Graben zu erstellen. Wenn sich der Graben neben Wasser befindet, füllt er sich mit Wasser.\n\nPlatziere auf: Sand (oder weichen Sand).\n\nErgebnis: Flaches Wasser (wenn in der Nähe von Wasser).\n\nErträge: Sand x2 Lehm x5.</Terraform_Sand-WaterShallow.description>
+
+  <Terraform_SoilF-WaterShallow.label>Erde zu Flaches Wasser</Terraform_SoilF-WaterShallow.label>
+  <Terraform_SoilF-WaterShallow.description>Grabe einen Abschnitt des Bodens aus, um einen flachen Graben zu erstellen. Wenn der Graben an Wasser angrenzt, füllt er sich mit Wasser.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Flaches Wasser (wenn in der Nähe von Wasser).\n\nErträge: Dreck x2, Lehm x5.</Terraform_SoilF-WaterShallow.description>
+
+  <Terraform_RockyDirt-WaterShallow.label>Rauer Kies zu Flaches Wasser</Terraform_RockyDirt-WaterShallow.label>
+  <Terraform_RockyDirt-WaterShallow.description>Grabe einen Abschnitt mit rauem Kies aus, um einen flachen Graben zu erstellen. Wenn sich der Graben neben Wasser befindet, füllt er sich mit Wasser.\n\nPlatziere auf: Rauer Kies.\n\nErgebnis: Flaches Wasser (wenn in der Nähe von Wasser).\n\nErträge: Lehm x5.</Terraform_RockyDirt-WaterShallow.description>
+
+  <Terraform_Marsh-WaterShallow.label>Sumpf zu Flaches Wasser</Terraform_Marsh-WaterShallow.label>
+  <Terraform_Marsh-WaterShallow.description>Filtere Dreck und Schlick aus sumpfigem Wasser, um sauberes flaches Wasser zu erzeugen.\n\nPlatziere auf: Sumpf.\n\nErgebnis: Flaches Wasser.\n\nErtrag: Dreck x1.</Terraform_Marsh-WaterShallow.description>
+
+  <Terraform_WaterDeep-WaterShallow.label>Tiefes Wasser zu Flaches Wasser</Terraform_WaterDeep-WaterShallow.label>
+  <Terraform_WaterDeep-WaterShallow.description>Verwendee Stahlkessel und eine große Menge Gestein, um tiefes Wasser teilweise aufzufüllen.\n\nPlatziere auf: Jede Art von tiefem Wasser.\n\nErgebnis: Flaches Wasser.</Terraform_WaterDeep-WaterShallow.description>
+
+  <Terraform_WaterShallow-WaterDeep.label>Flaches Wasser zu Tiefes Wasser</Terraform_WaterShallow-WaterDeep.label>
+  <Terraform_WaterShallow-WaterDeep.description>Grabe einen Bereich mit flachem Wasser in tiefes Wasser um.\n\nWARNUNG: Das Platzieren von unpassierbarem tiefem Wasser kann Ihre Kolonisten einsperren oder die KI der Gegner verwirren. Verwendung auf eigenes Risiko.\n\nPlatziere auf: Flaches Wasser.\n\nErgebnis: Tiefes Wasser.\n\nErträge: Schotter x5, Lehm x5.</Terraform_WaterShallow-WaterDeep.description>
+
+  <Terraform_Marsh-WaterDeep.label>Sumpf zu Tiefes Wasser</Terraform_Marsh-WaterDeep.label>
+  <Terraform_Marsh-WaterDeep.description>Grabe einen Sumpfbereich aus um ihn in tiefes Wasser zu verwandeln.\n\nWARNUNG: Das Platzieren von unpassierbarem tiefem Wasser kann Ihre Kolonisten einsperren oder die KI der Gegner verwirren. Verwendung auf eigenes Risiko. Verwendung auf eigenes Risiko.\n\nPlatziere auf: Sumpf.\n\nErgebnis: Tiefes Wasser.\n\nErträge: Schotter x5, Lehm x5.</Terraform_Marsh-WaterDeep.description>
+
+  <Terraform_Ice-WaterShallow.label>Eis zu Flaches Wasser</Terraform_Ice-WaterShallow.label>
+  <Terraform_Ice-WaterShallow.description>Breche Eis auf, um Flaches Wasser zu erzeugen. Nur für Eisbiome verwendbar.\n\nPlatziere auf: Eis.\n\nErgebnis: Flaches Wasser.</Terraform_Ice-WaterShallow.description>
+
+  <Terraform_Ice-RockyDirt.label>Eis zu Rauer Kies</Terraform_Ice-RockyDirt.label>
+  <Terraform_Ice-RockyDirt.description>Breche Eis auf, um festen Boden zu erreichen. Nicht für Eisbiome verwendbar.\n\nPlatziere auf: Eis.\n\nErgebnis: Rauer Kies.</Terraform_Ice-RockyDirt.description>
+
+
+  <!-- Farming -->
+
+  <Terraform_Stone-Topsoil.label>Stein zu Mutterboden</Terraform_Stone-Topsoil.label>
+  <Terraform_Stone-Topsoil.description>Lege eine Schicht Erde auf glattes Gelände, damit dort Pflanzen wachsen können.\n\nKann mit dem Werkzeug "Boden entfernen" entfernt werden.\n\nPlatziere auf: glatten Stein oder Eis.\n\nErgebnis: Mutterboden.</Terraform_Stone-Topsoil.description>
+
+  <Terraform_Topsoil-DirtFert.label>Mutterboden zu Gedüngter Mutterboden</Terraform_Topsoil-DirtFert.label>
+  <Terraform_Topsoil-DirtFert.description>Dünge den Mutterboden, um seine Fruchtbarkeit zu verbessern. Nährstoffreicher Boden muss mit Pflanzenresten oder Dünger aufgefüllt werden, um die Qualität zu erhalten.\n\nKann mit dem Werkzeug "Boden entfernen" entfernt werden.\n\nPlatziere auf: Mutterboden.\n\nErgebnis: Gedüngter Mutterboden.</Terraform_Topsoil-DirtFert.description>
+
+  <Terraform_SoilF-SoilRich.label>Fruchtbare Erde zu Gedüngte Erde</Terraform_SoilF-SoilRich.label>
+  <Terraform_SoilF-SoilRich.description>Dünge die Erde, um ihre Fruchtbarkeit zu verbessern. Gedüngte Erde muss mit Pflanzenresten oder Dünger aufgefüllt werden, um ihre Qualität zu erhalten.\n\nPlatziere auf: Jede Art von fruchtbarem Boden.\n\nErgebnis: Gedüngte Erde.</Terraform_SoilF-SoilRich.description>
+
+  <Terraform_SoilRich-SoilTilled.label>Gedüngte Erde zu Gepflügte Erde</Terraform_SoilRich-SoilTilled.label>
+  <Terraform_SoilRich-SoilTilled.description>Pflüge gedüngte Erde und füge zusätzlichen Dünger hinzu, um die Fruchtbarkeit zu maximieren. Gepflügte Erde muss mit pflanzlichen Düngerresten aufgefüllt werden, um die Qualität zu erhalten.\n\nKann mit dem Werkzeug "Boden entfernen" auf Gedüngte Erde zurückgesetzt werden.\n\nPlatziere auf: Gedüngte Erde.\n\nErgebnis: Gepflügte Erde.</Terraform_SoilRich-SoilTilled.description>
+
+  <Terraform_SoilWorn-SoilF.label>Abgenutzer Boden zu Fruchtbare Erde</Terraform_SoilWorn-SoilF.label>
+  <Terraform_SoilWorn-SoilF.description>Füllt abgenutzten Boden mit etwas Ellbogenfett auf.</Terraform_SoilWorn-SoilF.description>
+
+
+  <!-- Farming Tools -->
+
+  <CompostBin.label>Komposthaufen</CompostBin.label>
+  <CompostBin.description>Ein Behälter, in dem roher Kompost nach dreieinhalb Tagen zu Dünger wird. Der Haufen ist allerdings hässlich und stinkt ein bisschen.</CompostBin.description>
+
+  <CompostBarrel.label>Kompostierfass</CompostBarrel.label>
+  <CompostBarrel.description>Ein Kompostierfass wandelt 30 Rohkompost in 30 Dünger um. Im Gegensatz zu einem Kompostbehälter benötigt er jedoch Strom.</CompostBarrel.description>
+
+  <HeavySandbags.label>Schwere Sandsäcke</HeavySandbags.label>
+  <HeavySandbags.description>Hochwertige Sandsäcke aus Dreck oder Sand aus der Region, die von Stahlstangen gehalten werden. Sandsäcke sind hässlich, bieten aber eine hervorragende Deckung vor Fernkampfangriffen.</HeavySandbags.description>
+
+  <RFF_ScrapGenerator.label>Generator (Pflanzenreste)</RFF_ScrapGenerator.label>
+  <RFF_ScrapGenerator.description>Erzeugt Strom durch den Verbrauch von Pflanzenresten. Muss regelmäßig von Hand mit Pflanzenresten beladen werden.</RFF_ScrapGenerator.description>
+
+
+</LanguageData>

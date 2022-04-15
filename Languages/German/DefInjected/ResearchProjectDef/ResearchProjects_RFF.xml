@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RFF_Farming.label>Landwirtschaft</RFF_Farming.label>
+  <RFF_Farming.description>Diese Forschung repräsentiert fortgeschrittene Anbautechniken wie die Bodenbearbeitung, die über die einfache Düngung des Bodens hinausgehen. Es ermöglicht das Pflügen des Bodens, so dass auch natürlich reicher Boden verbessert werden kann. Außerdem kann der Mutterboden über glatten Stein geschichtet werden, sodass Farmen in unwirtlichen Umgebungen oder innerhalb von Bergen angelegt werden können.</RFF_Farming.description>
+
+  <RFF_Terraforming.label>Terraforming</RFF_Terraforming.label>
+  <RFF_Terraforming.description>Das Terraforming repräsentiert das Wissen über ausgefeilte Bewässerungs- und Entwässerungsmethoden, die eine Vielzahl von Geländeumwandlungen ermöglichen. Sand, Sumpf, Schlamm oder seichtes Wasser können beispielsweise in Ackerland umgewandelt werden. Künstliche Seen können angelegt werden. Steinböden können aufgebrochen und in weichen Boden verwandelt werden.</RFF_Terraforming.description>
+
+
+</LanguageData>

@@ -1,0 +1,94 @@
+<Defs>
+
+	<TerrainAffordanceDef>
+		<defName>Gravel</defName>
+		<label>stony soil</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>Ice</defName>
+		<label>ice</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>Marsh</defName>
+		<label>marsh</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>SoilMarshy</defName>
+		<label>marshy soil</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>SoilF</defName>
+		<label>fertile soil</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<!-- <TerrainAffordanceDef>
+		<defName>RFF_SoilFu</defName>
+		<label>fertile soil (upgradeable)</label>
+		<order>2500</order>
+	</TerrainAffordanceDef> -->
+
+	<TerrainAffordanceDef>
+		<defName>SoilRich</defName>
+		<label>rich soil</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>Mud</defName>
+		<label>mud</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>PackedDirt</defName>
+		<label>packed dirt</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>RockyDirt</defName>
+		<label>rough gravel</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>Sand</defName>
+		<label>sand</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>Topsoil</defName>
+		<label>topsoil</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+
+	<TerrainAffordanceDef>
+		<defName>WaterShallow</defName>
+		<label>shallow water</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>RoughStone</defName>
+		<label>rough or smooth stone</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+	<TerrainAffordanceDef>
+		<defName>SmoothStone</defName>
+		<label>smooth stone or ice</label>
+		<order>2500</order>
+	</TerrainAffordanceDef>
+
+</Defs>

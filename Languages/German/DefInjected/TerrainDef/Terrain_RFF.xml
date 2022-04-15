@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BrickFloor.label>Ziegelsteinboden</BrickFloor.label>
+  <BrickFloor.description>Lehmziegel für einen schönen Bodenbelag.</BrickFloor.description>
+
+  <HBBrickFloor.label>Fischgrätenziegelsteinboden</HBBrickFloor.label>
+  <HBBrickFloor.description>Lehmziegel in einem ausgefallenen Fischgrätenmuster. Ein bisschen mehr Arbeit zum verlegen als ein normaler Ziegelboden, aber auch ein bisschen attraktiver.</HBBrickFloor.description>
+
+  <RockySoil.label>Rauer Kies</RockySoil.label>
+  <RockySoil.tools.0.label>Kies</RockySoil.tools.0.label>
+
+  <TrenchShallow.label>Flacher Graben</TrenchShallow.label>
+  <TrenchShallow.tools.0.label>Kies</TrenchShallow.tools.0.label>
+
+  <TrenchMuddy.label>Schlammiger Graben</TrenchMuddy.label>
+  <TrenchMuddy.tools.0.label>Schlamm</TrenchMuddy.tools.0.label>
+
+  <TrenchDeep.label>Tiefer Graben</TrenchDeep.label>
+  <TrenchDeep.tools.0.label>Kies</TrenchDeep.tools.0.label>
+
+  <Topsoil.label>Mutterboden</Topsoil.label>
+  <DirtFert.label>Gedüngter Mutterboden</DirtFert.label>
+  <SoilTilled.label>Gepflügte Erde</SoilTilled.label>
+
+  <SoilWorn.label>Abgenutzter Boden</SoilWorn.label>
+  <SoilWorn.tools.0.label>Dreck</SoilWorn.tools.0.label>
+
+
+</LanguageData>

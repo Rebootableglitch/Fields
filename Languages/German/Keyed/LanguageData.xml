@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RFF.FertileFields>Fertile Fields</RFF.FertileFields>
+
+  <!-- ===== Designator Tooltip ===== -->
+
+  <RFF.Cost>Kosten:</RFF.Cost>
+  <RFF.Yield>Ertrag:</RFF.Yield>
+
+  <!-- ===== PlaceWorker Errors ===== -->
+
+  <RFF.OwnTerrain>Kann nicht auf dem Zielgelände platziert werden</RFF.OwnTerrain>
+  <RFF.Unplaceable>Kann nicht auf {0} platziert werden</RFF.Unplaceable>
+  <RFF.HardMode>Im Schweren Modus nicht erlaubt</RFF.HardMode>
+  <RFF.Biome>Nicht in diesem Biom erlaubt</RFF.Biome>
+  <RFF.HardModeBiome>Im Schweren Modus in diesem Biom nicht erlaubt</RFF.HardModeBiome>
+
+  <!-- ===== Mass-Based Recipes ===== -->
+
+  <RFF.BillRequires>Benötigt {0} kg </RFF.BillRequires>
+
+  <!-- ===== Growing Zones ===== -->
+
+  <RFF.ReturnToSoil>Pflanzenreste zu Erde</RFF.ReturnToSoil>
+  <RFF.ReturnToSoilDesc>Pflanzenreste, die diese Zone produzieren würde verbrauchen, um die Wahrscheinlichkeit einer Bodenabnutzung zu verringern.</RFF.ReturnToSoilDesc>
+  <RFF.ReplaceDesignators>Abgenutzter Boden ersetzen</RFF.ReplaceDesignators>
+  <RFF.ReplaceDesignatorsDesc>Wenn der Boden in dieser Zone abgenutzt ist, wird er automatisch zur erneuten Düngung und Pflügung bestimmt.</RFF.ReplaceDesignatorsDesc>
+
+  <!-- ===== Composting ===== -->
+
+  <RFF.Progress>Fortschritt:</RFF.Progress>
+  <RFF.NullMapHeld>Es wurde versucht, eine Kompostierfass-Temperatur zu erhalten, aber MapHeld ist null.</RFF.NullMapHeld>
+  <RFF.FullOfFert>Versucht, Rohkompost in ein mit Dünger gefülltes Fass zu geben. Kolonisten sollten zuerst den Dünger herausnehmen.</RFF.FullOfFert>
+  <RFF.ContainsFert>Enthält Dünger:</RFF.ContainsFert>
+  <RFF.ContainsComp>Enthält Rohkomost:</RFF.ContainsComp>
+  <RFF.Composted>Kompostiert</RFF.Composted>
+  <RFF.CompProg>Kompostierprozess:</RFF.CompProg>
+  <RFF.OutOfTemp>Kompostierfass außerhalb der idealen Temperatur:</RFF.OutOfTemp>
+  <RFF.Temp>Temperatur:</RFF.Temp>
+  <RFF.IdealTemp>Idealie Kompostiertemparatur:</RFF.IdealTemp>
+  <RFF.NotReady>Versucht Dünger zu bekommen, aber er ist noch nicht fertig.</RFF.NotReady>
+  <RFF.BadTemp>Schlechte Temperatur</RFF.BadTemp>
+  <RFF.NoComp>Contains no raw compost</RFF.NoComp>
+
+  <!-- ===== Options ===== -->
+
+  <RFF.NewGrowZonesRTS>Standardeinstellung "Zurück zu Erde"</RFF.NewGrowZonesRTS>
+  <RFF.NewGrowZonesRTSTip>Wenn diese Option aktiviert ist, geben neu erstellte Wachstumszonen standardmäßig Pflanzenreste in die Erde zurück, um die Bodenabnutzung zu verringern.\n\nDu kannst diese Option für eine einzelne Wachstumszone umschalten, indem du sie auswählst.</RFF.NewGrowZonesRTSTip>
+
+  <RFF.NewGrowZonesDR>Standardeinstellung "Abgenutzter Boden ersetzen"</RFF.NewGrowZonesDR>
+  <RFF.NewGrowZonesDRTip>Wenn diese Option aktiviert ist, platzieren neu erstellte Wachstumszonen standardmäßig automatisch Blaupausen, um abgenutzten Boden zu ersetzen.\n\nDu kannst diese Option für eine einzelne Wachstumszone umschalten, indem du sie auswählst.</RFF.NewGrowZonesDRTip>
+
+  <RFF.NonYieldPlants>Nicht ertragreiche Pflanzen nutzen den Boden ab</RFF.NonYieldPlants>
+  <RFF.NonYieldPlantsTip>Wenn diese Option aktiviert ist, können Pflanzen, die keine nützlichen Ressourcen liefern (außer Pflanzenreste), den Boden erschöpfen. Wenn es nicht aktiviert ist, werden sie nicht.</RFF.NonYieldPlantsTip>
+
+  <RFF.AutoRecompost>Kompostbehälter automatisch erneuern</RFF.AutoRecompost>
+  <RFF.AutoRecompostTip>Wenn diese Option aktiviert ist und ein Kompostbehälter die Düngerherstellung beendet hat, wird ein Entwurf für einen Ersatzkompostbehälter erstellt.</RFF.AutoRecompostTip>
+
+  <RFF.PlayHardMode>Schwerer Modus</RFF.PlayHardMode>
+  <RFF.PlayHardModeTip>Wenn diese Option aktiviert ist, wird die Möglichkeit deaktiviert, Eis in Eisbiomen und Meereiskarte zu entfernen, Schlamm, Sumpf oder sumpfigen Boden auf diesen Karten zu platzieren und tiefes Wasser zu erstellen oder zu entfernen.</RFF.PlayHardModeTip>
+
+  <RFF.SmartScraps>Intelligentes Verbot von Pflanzenresten</RFF.SmartScraps>
+  <RFF.SmartScrapsTip>Wenn diese Option aktiviert ist, werden Pflanzenreste, die neben Ihren Kolonisten erscheinen, automatisch zugelassen, unabhängig davon, wo sie sich befinden. Wenn Sie viele Kolonisten haben, kann es hilfreich sein, diese Option zu deaktivieren. Wenn diese Option deaktiviert ist, sind standardmäßig nur Pflanzenreste in Ihrer Heimatzone zulässig.</RFF.SmartScrapsTip>
+
+  <RFF.PlantScraps>Pflanzenreste Dropchance:</RFF.PlantScraps>
+  <RFF.PlantScrapsTip>Multipliziert die Gesamtzahl der von allen Pflanzen abgeworfenen Pflanzenreste mit dem ausgewählten Prozentsatz. Größere, ausgewachsene Pflanzen lassen mehr Reste fallen.</RFF.PlantScrapsTip>
+
+  <RFF.DepleteChance>Anfälligkeit für Bodenabnutzung:</RFF.DepleteChance>
+  <RFF.DepleteChanceTip>Multipliziert die Gesamtrate, mit der sich der Boden erschöpft, mit dem ausgewählten Prozentsatz. Fruchtbare Böden erschöpfen sich häufiger, und Pflanzen, die länger gewachsen sind, erschöpfen mit größerer Wahrscheinlichkeit den Boden.</RFF.DepleteChanceTip>
+
+  <RFF.SpecificDepletes>Spezifische Optionen für die Bodenabnutzung</RFF.SpecificDepletes>
+  <RFF.SpecificDepleteEntryMTB>{0}: Tage vor Abnutzung (Standard: {1})</RFF.SpecificDepleteEntryMTB>
+  <RFF.SpecificDepleteEntryMTBTip>Die durchschnittliche Pflanzenwachstumszeit (in Tagen), die vergeht, bevor der Boden abgenutzt ist. Je kleiner der Wert, desto häufiger wird der Boden erschöpft. Beachte, dass die Pflanzenwachstumszeit nur tagsüber anfällt, sodass die realen Zeiten etwa doppelt so lang sind.</RFF.SpecificDepleteEntryMTBTip>
+  <RFF.SpecificDepleteEntryRTS>{0}: Rückkehr zur normalen Erde (Standard: {1})</RFF.SpecificDepleteEntryRTS>
+  <RFF.SpecificDepleteEntryRTSTip>Die Wirksamkeit der Option "Rückkehr zur normalen Erde" für diesen Boden. 0 = keine Wirkung, 1 = immer wirksam, um die Erschöpfung dieses Bodens zu verhindern.</RFF.SpecificDepleteEntryRTSTip>
+
+
+</LanguageData>

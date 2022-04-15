@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Brick Wall -->
+
+	<ThingDef ParentName="Wall" Name="RFF_BrickWall">
+		<defName>BrickWall</defName>
+		<label>brick wall</label>
+		<description>A wall constructed of clay bricks and mortar.</description>
+		<graphicData>
+			<texPath>Stuff/RFF_Wall_Atlas_Bricks</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconPath>Stuff/RFF_Wall_Icon_Bricks</uiIconPath>
+		<statBases>
+			<MaxHitPoints>450</MaxHitPoints>
+			<WorkToBuild>125</WorkToBuild>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<stuffCategories Inherit="False" />
+		<costStuffCount Inherit="False" />
+		<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+		<costList>
+			<RFFBricks>4</RFFBricks>
+		</costList>
+	</ThingDef>	
+	
+	<!-- Production -->
+	
+	<ThingDef ParentName="BenchBase">
+		<defName>RockMill</defName>
+		<label>rock mill</label>
+		<thingClass>Building_WorkTable</thingClass>
+		<description>An electrically-powered mill for crushing and mixing rocks, sand and dirt. Much faster than manual operations at the stonecutter's table.</description>
+		<graphicData>
+			<texPath>Stuff/TableRockMill</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>2500</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-3</Cleanliness>
+			<WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
+		</statBases>
+		<size>(3,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+	</ThingDef>
+		
+	<!-- Terraforming -->
+
+	<ThingDef ParentName="BuildingBase" Name="RFF_TerraformBase" Abstract="True">
+		<thingClass>RFF_Code.Building_Terraform</thingClass>
+		<placeWorkers>
+			<li>RFF_Code.PlaceWorker_Dynamic</li>
+		</placeWorkers>
+		<graphicData>
+			<texPath>Stuff/RFF_Blueprint</texPath>
+			<shaderType>MetaOverlay</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<useHitPoints>true</useHitPoints>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockLight>false</blockLight>
+		<rotatable>false</rotatable>
+		<placingDraggableDimensions>2</placingDraggableDimensions>
+		<constructEffect>ConstructDirt</constructEffect>
+		<size>(1,1)</size>
+		<pathCost>60</pathCost>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Rare</tickerType>
+		<designationCategory>RFF_Adds</designationCategory>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>
+
+<!--	<ThingDef ParentName="RFF_TerraformBase" Name="Trench">
+		<defName>TrenchShallow</defName>
+		<label>trench</label>
+		<thingClass>RFF_Code.Building_TerraformingTrench</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Linked/EarthenMound/EarthenMound_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Custom2</li>
+				<li>MapEdge</li>
+			</linkFlags>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/EarthenMound/EarthenMound_MenuIcon</uiIconPath>
+		<designationCategory />
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<selectable>false</selectable>
+		<useHitPoints>false</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<expandHomeArea>false</expandHomeArea>
+			<isInert>true</isInert>
+		</building>
+		<modExtensions>
+			<li Class="RFF_Code.TerraformTrench">
+				<isDeep>false</isDeep>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="Trench">
+		<defName>TrenchDeep</defName>
+		<label>deep trench</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/EarthenMound/EarthenMound_Atlas</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/EarthenMound/EarthenMound_MenuIcon</uiIconPath>
+		<modExtensions>
+			<li Class="RFF_Code.TerraformTrench">
+				<isDeep>true</isDeep>
+			</li>
+		</modExtensions>
+	</ThingDef> -->
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-Stone</defName>
+		<label>rough gravel to rough stone</label>
+		<description>Places a layer of crushed stone that can be compacted into a rough stone surface. Takes a lot of work.\n\nPlace on: rough gravel.\n\nResult: rough stone suited to the local bedrock.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Granite_Rough</result> <!-- map-appropriate rough stone type -->
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_RoughStone</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-Stone</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-RockyDirt</defName>
+		<label>rough gravel to rough gravel</label>
+		<description>Sifts out any irregularities from rough gravel terrain. Useful for clearing mod-added terrains that are similar to rough gravel.\n\nPlace on: rough gravel equivalent.\n\nResult: rough gravel.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Sand-RockyDirt</defName>
+		<label>sand to rough gravel</label>
+		<description>Sifts out useable sand from sand terrain, leaving useless, infertile rough gravel.\n\nPlace on: sand (or soft sand).\n\nResult: rough gravel.\n\nYields: sand x2.</description>
+		<terrainAffordanceNeeded>Sand</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<SandPile>2</SandPile>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/Sand-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Gravel-RockyDirt</defName>
+		<label>stony soil to rough gravel</label>
+		<description>Removes the usable material from stony soil, leaving useless, infertile rough gravel.\n\nPlace on: stony soil.\n\nResult: rough gravel.\n\nYields: sand x2, clay x1, crushed rocks x1.</description>
+		<terrainAffordanceNeeded>Gravel</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<SandPile>2</SandPile>
+					<CrushedRocks>1</CrushedRocks>
+					<RFFClay>1</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/Gravel-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-RockyDirt</defName>
+		<label>soil to rough gravel</label>
+		<description>Removes dirt from fertile soil, leaving useless, infertile rough gravel.\n\nPlace on: any type of fertile soil.\n\nResult: rough gravel.\n\nYields: dirt x3.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<PileofDirt>3</PileofDirt>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/SoilF-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilMarshy-RockyDirt</defName>
+		<label>marshy soil to rough gravel</label>
+		<description>Drains and clears usable material from marshy soil, leaving useless, infertile (but dry) rough gravel.\n\nPlace on: marshy soil.\n\nResult: rough gravel.\n\nYields: dirt x2.</description>
+		<terrainAffordanceNeeded>SoilMarshy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<PileofDirt>2</PileofDirt>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/SoilMarshy-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Mud-RockyDirt</defName>
+		<label>mud to rough gravel</label>
+		<description>Clears and filters useful dirt from muddy terrain, leaving useless, infertile (but dry) rough gravel.\n\nPlace on: mud.\n\nResult: rough gravel.\n\nYields: dirt x1.</description>
+		<terrainAffordanceNeeded>Mud</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/Mud-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Stone-RockyDirt</defName>
+		<label>stone to rough gravel</label>
+		<description>Breaks up stone terrain into infertile rough gravel, allowing it to be further terraformed to a useful terrain.\n\nPlace on: any type of rough or smooth stone.\n\nResult: rough gravel.\n\nYields: crushed rocks x2.</description>
+		<terrainAffordanceNeeded>RoughStone</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<products>
+					<CrushedRocks>2</CrushedRocks>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/Stone-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterShallow-RockyDirt</defName>
+		<label>shallow water to rough gravel</label>
+		<description>Fills in shallow water with rough gravel, allowing it to be further terraformed to a useful terrain.\n\nPlace on: any type of shallow water.\n\nResult: rough gravel.</description>
+		<terrainAffordanceNeeded>WaterShallow</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<costList>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/WaterShallow-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Sand-Sand</defName>
+		<label>sand to sand</label>
+		<description>Sifts out any irregularities from sand terrain. Useful to clear soft sand or modded-added terrains similar to sand.\n\nPlace on: sand equivalent.\n\nResult: sand.</description>
+		<terrainAffordanceNeeded>Sand</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Sand</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Sand</designatorDropdown>
+		<uiIconPath>Icons/Sand-Sand</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-Sand</defName>
+		<label>rough gravel to sand</label>
+		<description>Places sand on rough gravel terrain.\n\nPlace on: rough gravel.\n\nResult: sand.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Sand</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<costList>
+			<SandPile>2</SandPile>
+		</costList>
+		<designatorDropdown>SubCategory_Sand</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-Sand</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Gravel-Sand</defName>
+		<label>stony soil to sand</label>
+		<description>Sifts stony soil, removing larger stones and clumps of clay and leaving only fine sand.\n\nPlace on: stony soil.\n\nResult: sand.\n\nYields: clay x1, crushed rocks x1.</description>
+		<terrainAffordanceNeeded>Gravel</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Sand</result>
+				<products>
+					<RFFClay>1</RFFClay>
+					<CrushedRocks>1</CrushedRocks>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Sand</designatorDropdown>
+		<uiIconPath>Icons/Gravel-Sand</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-Sand</defName>
+		<label>soil to sand</label>
+		<description>Breaks up and sifts fertile soil, leaving behind fine sand.\n\nPlace on: any type of fertile soil.\n\nResult: sand.\n\nYields: dirt x1, clay x1, crushed rocks x1.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Sand</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+					<RFFClay>1</RFFClay>
+					<CrushedRocks>1</CrushedRocks>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Sand</designatorDropdown>
+		<uiIconPath>Icons/SoilF-Sand</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterShallow-Sand</defName>
+		<label>shallow water to sand</label>
+		<description>Fills in shallow water with rock and covers it over with sand.\n\nPlace on: any type of shallow water.\n\nResult: sand.</description>
+		<terrainAffordanceNeeded>WaterShallow</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Sand</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1250</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<SandPile>5</SandPile>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_Sand</designatorDropdown>
+		<uiIconPath>Icons/WaterShallow-Sand</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Gravel-Gravel</defName>
+		<label>stony soil to stony soil</label>
+		<description>Cleans out irregularities from stony soil. Useful for clearing mod-added terrains similar to stony soil.\n\nPlace on: stony soil equivalent.\n\nResult: stony soil.</description>
+		<terrainAffordanceNeeded>Gravel</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Gravel</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Gravel</designatorDropdown>
+		<uiIconPath>Icons/Gravel-Gravel</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-Gravel</defName>
+		<label>rough gravel to stony soil</label>
+		<description>Reclaims rough gravel with rock, clay, and sand, creating rocky soil with low fertility.\n\nPlace on: rough gravel.\n\nResult: stony soil.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Gravel</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<costList>
+			<SandPile>2</SandPile>
+			<CrushedRocks>1</CrushedRocks>
+			<RFFClay>1</RFFClay>
+		</costList>
+		<designatorDropdown>SubCategory_Gravel</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-Gravel</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Sand-Gravel</defName>
+		<label>sand to stony soil</label>
+		<description>Mixes crushed rock and clay into sand, creating rocky soil with low fertility.\n\nPlace on: sand (or soft sand).\n\nResult: stony soil.</description>
+		<terrainAffordanceNeeded>Sand</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Gravel</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<costList>
+			<CrushedRocks>1</CrushedRocks>
+			<RFFClay>1</RFFClay>
+		</costList>
+		<designatorDropdown>SubCategory_Gravel</designatorDropdown>
+		<uiIconPath>Icons/Sand-Gravel</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-Gravel</defName>
+		<label>soil to stony soil</label>
+		<description>Sifts valuable dirt from fertile soil, reducing its fertilty somewhat.\n\nPlace on: any type of fertile soil.\n\nResult: stony soil.\n\nYield: dirt x1.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Gravel</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Gravel</designatorDropdown>
+		<uiIconPath>Icons/SoilF-Gravel</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-PackedDirt</defName>
+		<label>soil to packed dirt</label>
+		<description>Compacts dirt into a hard-packed surface, suitable for roads. Packed dirt does not slow people, but is not fertile. It can be returned to fertile soil relatively easily.\n\nPlace on: any type of fertile soil.\n\nResult: packed dirt.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>PackedDirt</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_PackedDirt</designatorDropdown>
+		<uiIconPath>Icons/SoilF-PackedDirt</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-SoilF</defName>
+		<label>soil to soil</label>
+		<description>Smooths out any irregularities in soil. Useful for cleaning out lichen or mod-added terrains similar to soil. Warning: will remove rich soil.\n\nPlace on: any type of fertile soil.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/SoilF-SoilF</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Sand-SoilF</defName>
+		<label>sand to soil</label>
+		<description>Mixes rocks, clay, and dirt into sand terrain to reclaim it for planting.\n\nPlace on: sand (or soft sand).\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>Sand</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>1</PileofDirt>
+			<RFFClay>1</RFFClay>
+			<CrushedRocks>1</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/Sand-Soil</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Gravel-SoilF</defName>
+		<label>stony soil to soil</label>
+		<description>Reclaims stony soil with fresh dirt to enhance its fertility.\n\nPlace on: stony soil.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>Gravel</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>1</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/Gravel-Soil</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-SoilF</defName>
+		<label>rough gravel to soil</label>
+		<description>Reclaims rough gravel with plenty fresh dirt to render it fertile.\n\nPlace on: rough gravel.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>3</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-SoilF</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_PackedDirt-SoilF</defName>
+		<label>packed dirt to soil</label>
+		<description>Breaks up packed dirt, leaving fertile soil behind. Very fast.\n\nPlace on: packed dirt.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>PackedDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>250</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/PackedDirt-Soil</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Mud-SoilF</defName>
+		<label>mud to soil</label>
+		<description>Reclaims muddy terrain with fresh dirt, rendering it fertile.\n\nPlace on: mud.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>Mud</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>2</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/Mud-Soil</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilMarshy-SoilF</defName>
+		<label>marshy soil to soil</label>
+		<description>Reclaims marshy soil with fresh dirt to make it more stable and faster to walk on.\n\nPlace on: marshy soil.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>SoilMarshy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>1</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/SoilMarshy-Soil</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Marsh-SoilF</defName>
+		<label>marsh to soil</label>
+		<description>Reclaims marshland with dirt, creating dry and fertile soil.\n\nPlace on: marsh.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>Marsh</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<PileofDirt>2</PileofDirt>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/Marsh-Soil</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterShallow-SoilF</defName>
+		<label>shallow water to soil</label>
+		<description>Fills in shallow water with dirt, creating dry and fertile soil.\n\nPlace on: shallow water.\n\nResult: soil.</description>
+		<terrainAffordanceNeeded>WaterShallow</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<PileofDirt>3</PileofDirt>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/WaterShallow-SoilF</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Mud-Mud</defName>
+		<label>mud to mud</label>
+		<description>Cleans out irregularities from mud. Useful for clearing mod-added terrains similar to mud.\n\nPlace on: mud equivalent.\n\nResult: mud.</description>
+		<terrainAffordanceNeeded>Mud</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Mud</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Mud</designatorDropdown>
+		<uiIconPath>Icons/Mud-Mud</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-Mud</defName>
+		<label>soil to mud</label>
+		<description>Waters down fertile soil, creating mud that doesn't support plants or buildings but can be used to slow down attackers.\n\nPlace on: any type of fertile soil.\n\nResult: mud.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Mud</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+				</products>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Mud</designatorDropdown>
+		<uiIconPath>Icons/SoilF-Mud</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilMarshy-Mud</defName>
+		<label>marshy soil to mud</label>
+		<description>Dredges out marshy soil, yielding mud.\n\nPlace on: marshy soil.\n\nResult: mud.</description>
+		<terrainAffordanceNeeded>SoilMarshy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Mud</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Mud</designatorDropdown>
+		<uiIconPath>Icons/SoilMarshy-Mud</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Marsh-Mud</defName>
+		<label>marsh to mud</label>
+		<description>Adds bedrock below marshland, creating wet, muddy, but marginally solid ground.\n\nPlace on: marsh.\n\nResult: mud.</description>
+		<terrainAffordanceNeeded>Marsh</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Mud</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1250</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_Mud</designatorDropdown>
+		<uiIconPath>Icons/Marsh-Mud</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilMarshy-SoilMarshy</defName>
+		<label>marshy soil to marshy soil</label>
+		<description>Clears out irregularities from marshy soil terrain. Useful to clean up mod-added terrain similar to marshy soil.\n\nPlace on: marshy soil equivalent.\n\nResult: marshy soil.\n\nYields: dirt x1.</description>
+		<terrainAffordanceNeeded>SoilMarshy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>MarshyTerrain</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_SoilMarshy</designatorDropdown>
+		<uiIconPath>Icons/SoilMarshy-SoilMarshy</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-SoilMarshy</defName>
+		<label>soil to marshy soil</label>
+		<description>Harvests dirt from fertile soil, adding in stagnant surface water to make a spongy terrain with poor mobility.\n\nPlace on: any type of fertile soil.\n\nResult: marshy soil.\n\nYields: dirt x1.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>MarshyTerrain</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+				</products>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>750</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_SoilMarshy</designatorDropdown>
+		<uiIconPath>Icons/SoilF-SoilMarshy</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Mud-SoilMarshy</defName>
+		<label>mud to marshy soil</label>
+		<description>Adds dirt to mud to create soft, spongy, but fertile marshy ground.\n\nPlace on: mud.\n\nResult: marshy soil.</description>
+		<terrainAffordanceNeeded>Mud</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>MarshyTerrain</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>1</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_SoilMarshy</designatorDropdown>
+		<uiIconPath>Icons/Mud-SoilMarshy</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Marsh-SoilMarshy</defName>
+		<label>marsh to marshy soil</label>
+		<description>Adds dirt and bedrock to marshland, creating solid, but still wet, ground.\n\nPlace on: marsh.\n\nResult: marshy soil.</description>
+		<terrainAffordanceNeeded>Marsh</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>MarshyTerrain</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<costList>
+			<PileofDirt>1</PileofDirt>
+			<CrushedRocks>5</CrushedRocks>
+		</costList>
+		<designatorDropdown>SubCategory_SoilMarshy</designatorDropdown>
+		<uiIconPath>Icons/Marsh-SoilMarshy</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-Marsh</defName>
+		<label>soil to marsh</label>
+		<description>Digs out a section of fertile soil and fills in the rest with silty water to create marshland.\n\nPlace on: any type of fertile soil.\n\nResult: marsh.\n\nYields: dirt x1, clay x5.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchMuddy</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+					<RFFClay>5</RFFClay>
+				</products>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1250</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Marsh</designatorDropdown>
+		<uiIconPath>Icons/SoilF-Marsh</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Mud-Marsh</defName>
+		<label>mud to marsh</label>
+		<description>Digs out a section of mud and fills in the rest with silty water to create marshland.\n\nPlace on: mud.\n\nResult: marsh.\n\nYields: clay x5.</description>
+		<terrainAffordanceNeeded>Mud</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchMuddy</result>
+				<products>
+					<RFFClay>5</RFFClay>
+				</products>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Marsh</designatorDropdown>
+		<uiIconPath>Icons/Mud-Marsh</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilMarshy-Marsh</defName>
+		<label>marshy soil to marsh</label>
+		<description>Digs out marshy soil to create marsh adjacent to surface water (including other marshes).\n\nPlace on: marshy soil.\n\nResult: marsh.\n\nYields: clay x5.</description>
+		<terrainAffordanceNeeded>SoilMarshy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchMuddy</result>
+				<products>
+					<RFFClay>5</RFFClay>
+				</products>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1250</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Marsh</designatorDropdown>
+		<uiIconPath>Icons/SoilMarshy-Marsh</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterShallow-Marsh</defName>
+		<label>shallow water to marsh</label>
+		<description>Adds dirt and silt to shallow water, converting it into marsh. \n\nPlace on: shallow water.\n\nResult: marsh.</description>
+		<terrainAffordanceNeeded>WaterShallow</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchMuddy</result>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li><li>IceSheet</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1250</WorkToBuild>
+		</statBases>
+		<costList>
+			<PileofDirt>2</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Marsh</designatorDropdown>
+		<uiIconPath>Icons/WaterShallow-Marsh</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Sand-WaterShallow</defName>
+		<label>sand to shallow water</label>
+		<description>Digs out a section of sand to create a shallow trench. If adjacent to water, the trench will fill in with water of the appropriate type.\n\nPlace on: sand (or soft sand).\n\nResult: shallow water (if near water).\n\nYields: sand x2, clay x5.</description>
+		<terrainAffordanceNeeded>Sand</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchShallow</result>
+				<products>
+					<SandPile>2</SandPile>
+					<RFFClay>5</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+		<uiIconPath>Icons/Sand-WaterShallow</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-WaterShallow</defName>
+		<label>soil to shallow water</label>
+		<description>Digs out a section of soil to create a shallow trench. If adjacent to water, the trench will fill in with water of the appropriate type.\n\nPlace on: any type of fertile soil.\n\nResult: shallow water (if near water).\n\nYields: dirt x2, clay x5.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchShallow</result>
+				<products>
+					<PileofDirt>2</PileofDirt>
+					<RFFClay>5</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+		<uiIconPath>Icons/SoilF-WaterShallow</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_RockyDirt-WaterShallow</defName>
+		<label>rough gravel to shallow water</label>
+		<description>Digs out a section of rough gravel to create a shallow trench. If adjacent to water, the trench will fill in with water of the appropriate type.\n\nPlace on: rough gravel.\n\nResult: shallow water (if near water).\n\nYields: clay x5.</description>
+		<terrainAffordanceNeeded>RockyDirt</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchShallow</result>
+				<products>
+					<RFFClay>5</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+		<uiIconPath>Icons/RockyDirt-WaterShallow</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Marsh-WaterShallow</defName>
+		<label>marsh to shallow water</label>
+		<description>Filters dirt and silt out of marshy water to create clean shallow water.\n\nPlace on: marsh.\n\nResult: shallow water.\n\nYield: dirt x1.</description>
+		<terrainAffordanceNeeded>Marsh</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchShallow</result>
+				<products>
+					<PileofDirt>1</PileofDirt>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+		<uiIconPath>Icons/Marsh-WaterShallow</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterDeep-WaterShallow</defName>
+		<label>deep water to shallow water</label>
+		<description>Uses steel caisons and a large amount of rock to partially fill in deep water.\n\nPlace on: any type of deep water.\n\nResult: shallow water.</description>
+		<terrainAffordanceNeeded>WaterDeep</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>TrenchShallow</result>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+		</statBases>
+		<costList>
+			<CrushedRocks>5</CrushedRocks>
+			<Steel>10</Steel>
+		</costList>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+		<uiIconPath>Icons/WaterDeep-WaterShallow</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_WaterShallow-WaterDeep</defName>
+		<label>shallow water to deep water</label>
+		<description>Digs out an area of shallow water into deep water.\n\nWARNING: Placing impassable deep water can trap your pawns or break raider visitor AI. Use at your own risk.\n\nPlace on: shallow water.\n\nResult: deep water.\n\nYields: rock x5, clay x5.</description>
+		<terrainAffordanceNeeded>WaterShallow</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<hardmodeAllows>false</hardmodeAllows>
+				<result>TrenchDeep</result>
+				<products>
+					<CrushedRocks>5</CrushedRocks>
+					<RFFClay>5</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<designatorDropdown>SubCategory_WaterDeep</designatorDropdown>
+		<uiIconPath>Icons/WaterShallow-WaterDeep</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Marsh-WaterDeep</defName>
+		<label>marsh to deep water</label>
+		<description>Digs out an area of marsh into deep water.\n\nWARNING: Placing impassable deep water can trap your pawns or break raider AI. Use at your own risk.\n\nPlace on: marsh.\n\nResult: deep water.\n\nYields: rock x5, clay x5.</description>
+		<terrainAffordanceNeeded>Marsh</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<hardmodeAllows>false</hardmodeAllows>
+				<result>TrenchDeep</result>
+				<products>
+					<CrushedRocks>5</CrushedRocks>
+					<RFFClay>5</RFFClay>
+				</products>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Terraforming</li></researchPrerequisites>
+		<designatorDropdown>SubCategory_WaterDeep</designatorDropdown>
+		<uiIconPath>Icons/Marsh-WaterDeep</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Ice-WaterShallow</defName>
+		<label>ice to shallow water</label>
+		<description>Break up ice to create shallow water. Only useable on Ice Sheet biomes.\n\nPlace on: ice terrain.\n\nResult: shallow water.</description>
+		<terrainAffordanceNeeded>Ice</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>WaterShallow</result>
+				<biomesAllowedOn><li>IceSheet</li></biomesAllowedOn>
+				<hardmodeAllows>false</hardmodeAllows>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>2500</WorkToBuild>
+		</statBases>
+		<uiIconPath>Icons/Ice-WaterShallow</uiIconPath>
+		<designatorDropdown>SubCategory_WaterShallow</designatorDropdown>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Ice-RockyDirt</defName>
+		<label>ice to rough gravel</label>
+		<description>Break up ice to reach solid ground. Not useable on Ice Sheet biomes.\n\nPlace on: ice terrain.\n\nResult: rough gravel.</description>
+		<terrainAffordanceNeeded>Ice</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>RockySoil</result>
+				<biomesDisallowedOn><li>IceSheet</li></biomesDisallowedOn>
+				<hardmodeBiomesDisallowedOn><li>SeaIce</li></hardmodeBiomesDisallowedOn>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_RockyDirt</designatorDropdown>
+		<uiIconPath>Icons/Ice-RockyDirt</uiIconPath>
+	</ThingDef>
+
+	<!-- Farming -->
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Stone-Topsoil</defName>
+		<label>topsoil</label>
+		<description>Place a layer of soil on smooth terrain to allow plants to be grown there.\n\nCan be removed with the "Remove Floor" tool.\n\nPlace on: smooth stone or ice.\n\nResult: topsoil.</description>
+		<terrainAffordanceNeeded>SmoothStone</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Topsoil</result>
+				<isGrowingJob>true</isGrowingJob>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>250</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Farming</li></researchPrerequisites>
+		<designationCategory>RFF_Farm</designationCategory>
+		<costList>
+			<PileofDirt>2</PileofDirt>
+		</costList>
+		<designatorDropdown>SubCategory_Topsoil</designatorDropdown>
+		<uiIconPath>Icons/Stone-Soil</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_Topsoil-DirtFert</defName>
+		<label>fertilized topsoil</label>
+		<description>Add fertilizer to topsoil to improve its fertility. Rich soil must be replenished with plant scraps or fertilizer to maintain its quality.\n\nCan be removed with the "Remove Floor" tool.\n\nPlace on: topsoil.\n\nResult: fertilized topsoil.</description>
+		<terrainAffordanceNeeded>Topsoil</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>DirtFert</result>
+				<isGrowingJob>true</isGrowingJob>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Farming</li></researchPrerequisites>
+		<designationCategory>RFF_Farm</designationCategory>
+		<costList>
+			<Fertilizer>1</Fertilizer>
+		</costList>
+		<designatorDropdown>SubCategory_RichTopsoil</designatorDropdown>
+		<uiIconPath>Icons/SoilF-SoilRich</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilF-SoilRich</defName>
+		<label>rich soil</label>
+		<description>Add fertilizer to soil to improve its fertility. Rich soil must be replenished with plant scraps or fertilizer to maintain its quality.\n\nPlace on: any type of fertile soil.\n\nResult: rich soil.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>SoilRich</result>
+				<isGrowingJob>true</isGrowingJob>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designationCategory>RFF_Farm</designationCategory>
+		<costList>
+			<Fertilizer>1</Fertilizer>
+		</costList>
+		<designatorDropdown>SubCategory_RichSoil</designatorDropdown>
+		<uiIconPath>Icons/SoilF-SoilRich</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilRich-SoilTilled</defName>
+		<label>tilled soil</label>
+		<description>Tills rich soil and adds additional fertilizer to maximize its fertility. Tilled soil must be replenished with plant scraps of fertilizer to maintain its quality.\n\nCan be reverted to rich soil with the "Remove Floor" tool.\n\nPlace on: rich soil.\n\nResult: tilled soil.</description>
+		<terrainAffordanceNeeded>SoilRich</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>SoilTilled</result>
+				<isGrowingJob>true</isGrowingJob>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites><li>RFF_Farming</li></researchPrerequisites>
+		<designationCategory>RFF_Farm</designationCategory>
+		<costList>
+			<Fertilizer>1</Fertilizer>
+		</costList>
+		<designatorDropdown>SubCategory_TilledSoil</designatorDropdown>
+		<uiIconPath>Icons/SoilRich-SoilTilled</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RFF_TerraformBase">
+		<defName>Terraform_SoilWorn-SoilF</defName>
+		<label>replenish soil</label>
+		<description>Replenishes worn-out soil with a little elbow grease.</description>
+		<terrainAffordanceNeeded>SoilF</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RFF_Code.Terraformer">
+				<result>Soil</result>
+				<isGrowingJob>true</isGrowingJob>
+				<hidden>true</hidden>
+			</li>
+		</modExtensions>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+		</statBases>
+		<designatorDropdown>SubCategory_Soil</designatorDropdown>
+		<uiIconPath>Icons/SoilF-SoilF</uiIconPath>
+	</ThingDef>
+
+	<!-- Farming Tools -->
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>CompostBin</defName>
+		<label>compost bin</label>
+		<thingClass>RFF_Code.Building_CompostBin</thingClass>
+		<description>A bin in which raw compost, after three and a half days, will become fertilizer. The bin's kind of ugly, though, and smells a bit.</description>
+		<graphicData>
+			<texPath>Stuff/Compost Bin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<blockLight>false</blockLight>
+		<placingDraggableDimensions>2</placingDraggableDimensions>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToBuild>250</WorkToBuild>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<constructEffect>ConstructWood</constructEffect>
+		<costList>
+			<WoodLog>2</WoodLog>
+			<RawCompost>3</RawCompost>
+		</costList>
+		<useHitPoints>true</useHitPoints>
+		<size>(1,1)</size>
+		<designationCategory>RFF_Farm</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="RFF_Code.CompProperties_CompostBin">
+				<fermentTicks>840</fermentTicks>
+				<product>Fertilizer</product>
+			</li>
+		</comps>
+		<pathCost>60</pathCost>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>CompostBarrel</defName>
+		<label>compost barrel</label>
+		<description>A compost barrel will convert 30 raw compost into 30 fertilizer. Unlike a compost bin, though, it requires power.</description>
+		<thingClass>RFF_Code.Building_CompostBarrel</thingClass>
+		<graphicData>
+			<texPath>Stuff/CompostBarrel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.75, 0.35, 0.33)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>10</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<WoodLog>10</WoodLog>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(241,200,160,0)</glowColor>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>49</maxSafeTemperature>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>true</rotatable>
+		<designationCategory>RFF_Farm</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="Sandbags">
+		<defName>HeavySandbags</defName>
+		<label>heavy sandbags</label>
+		<description>High-quality leather bags of locally-sourced dirt or sand held in place by steel rods. Sandbags are ugly, but provide excellent cover from ranged attacks.</description>
+		<fillPercent>0.65</fillPercent>
+		<statBases>
+			<MaxHitPoints>675</MaxHitPoints>
+			<WorkToBuild>270</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>3</Steel>
+			<SandPile>1</SandPile>
+		</costList>
+		<costStuffCount>5</costStuffCount>
+		<stuffCategories Inherit="False">
+			<li>Leathery</li>
+		</stuffCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RFF_ScrapGenerator</defName>
+		<label>plant scrap generator</label>
+		<description>Produces power by consuming plant scraps. Must be periodically loaded with plant scraps as fuel by hand.</description>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Stuff/ScrapGenerator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(1.93,1,1.69)</volume>
+				<offset>(-0.03,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>150</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>1.0</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerPlant</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>80.0</fuelConsumptionRate>
+				<fuelCapacity>200.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>PlantScraps</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>6</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+
+</Defs>

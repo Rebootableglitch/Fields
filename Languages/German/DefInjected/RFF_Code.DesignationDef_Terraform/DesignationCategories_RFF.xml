@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Stone.label>Umwandlung zu Stein</Stone.label>
+  <Stone.description>Verwandelt das ausgewählte Gelände in Stein. Dies dauert lange und kostet Schotter und andere Ressourcen, bringt jedoch Dreck oder Sand aus geeignetem Gelände zurück.</Stone.description>
+
+  <RockySoil.label>Umwandlung zu Rauer Kies</RockySoil.label>
+  <RockySoil.description>Verwandelt das ausgewählte Gelände in Rauen Kies, ein trostloses, wertloses Gelände. Dadurch wird nützliches Material aus dem Gelände gewonnen, aber das Land muss saniert werden, bevor es bewirtschaftet oder bebaut werden kann.</RockySoil.description>
+
+  <Sand.label>Umwandlung zu Sand</Sand.label>
+  <Sand.description>Verwandelt das ausgewählte Gelände in Sand. Wenn die Umwandlung auf nutzbarem Boden durchgeführt wird, entstehen Lehm und Schotter sowie Dreck aus fruchtbarem Boden.</Sand.description>
+
+  <Gravel.label>Umwandlung zu Steinige Erde</Gravel.label>
+  <Gravel.description>Verwandelt das ausgewählte Gelände in Steinige Erde, ein weniger fruchtbares, aber immer noch nutzbares Gelände. Dies erfordert keinen Dreckt, erfordert jedoch im Allgemeinen Sand, Schotter und / oder Lehm.</Gravel.description>
+
+  <PackedDirt.label>Umwandlung zu Festgetretene Erde</PackedDirt.label>
+  <PackedDirt.description>Verwandelt das ausgewählte Gelände in Festgetretene Erde, ein hartes, nicht fruchtbares Gelände, das für den Straßenbau geeignet ist. Da Festgetretene Erde immer noch Erde ist, kann sie bei Bedarf leicht in Fruchtbare Erde umgewandelt werden.</PackedDirt.description>
+
+  <Mud.label>Umwandlung zu Schlamm</Mud.label>
+  <Mud.description>Verwandelt das ausgewählte Gelände in Schlamm, ein klebriges, langsam zu überquerendes Gelände, auf dem nicht gebaut oder angepflanzt werden kann. Erfordert Dreck, außer auf fruchtbarem Boden.</Mud.description>
+
+  <Soil.label>Umwandlung zu Erde</Soil.label>
+  <Soil.description>Verwandelt das ausgewählte Gelände in Erde, die für den Anbau von Pflanzen geeignet ist. Benötigt Dreck (sofern nicht auf Festgetretene Erde platziert).</Soil.description>
+
+  <MarshySoil.label>Umwandlung zu Sumpfige Erde</MarshySoil.label>
+  <MarshySoil.description>Verwandelt das ausgewählte Gelände in Sumpfige Erde, die etwas weniger wertvoll ist als normale Erde. Dies erfordert Dreck, es sei denn, sie wird auf Fruchtbarer Erde oder Ähnliches gelegt.</MarshySoil.description>
+
+  <Marsh.label>Umwandlung zu Sumpf</Marsh.label>
+  <Marsh.description>Verwandelt das ausgewählte Gelände in einen Sumpf und gräbt dann einen kurzen Graben. Wenn sich der Graben neben dem Oberflächenwasser befindet, füllt er sich, um einen Sumpf zu erzeugen.\n\nAlternativ kann dies auf flachem Wasser verwendet werden, um es mit Schlick zu füllen und dadurch direkt einen Sumpf zu erzeugen.</Marsh.description>
+
+  <WaterShallow.label>Umwandlung zu Flaches Wasser</WaterShallow.label>
+  <WaterShallow.description>Gräbt einen großen Graben im ausgewählten Gelände und liefert geeignete Ressourcen. Neben dem Oberflächenwasser füllt sich der Graben, um Flaches Wasser zu erzeugen.\n\nAlternativ kann dies verwendet werden, um Eis aufzubrechen oder einen Sumpf zu filtern, um direkt Flaches Wasser zu erzeugen.</WaterShallow.description>
+
+  <WaterDeep.label>Umwandlung zu Tiefes Wasser</WaterDeep.label>
+  <WaterDeep.description>Gräbt einen großen Graben im ausgewählten Gelände und liefert geeignete Ressourcen. Wenn sich der Graben neben dem Oberflächenwasser befindet, füllt er sich, um Tiefes Wasser zu erzeugen.\n\nAlternativ kann dies verwendet werden, um Eis aufzubrechen oder einen Sumpf zu filtern, um direkt Wasser zu erzeugen.\n\nWARNUNG: Das Erstellen von unpassierbarem Gelände kann schwerwiegend Folgen haben wie z.B Handelskarawanen beeinträchtigen und die KI überfordern. Benutzung auf eigene Gefahr.</WaterDeep.description>
+
+  <RichSoil.label>Umwandlung zu Gedüngte Erde</RichSoil.label>
+  <RichSoil.description>Verwandelt das ausgewählte Gelände mit Dünger in Gedüngte Erde. Sofern nicht auf Fruchtbarer Erde (einschließlich Festgetretene Erde, Schlamm oder Mutterboden) gelegt, ist auch Dreck erforderlich.</RichSoil.description>
+
+  <TilledSoil.label>Umwandlung zu Gepflügte Erde</TilledSoil.label>
+  <TilledSoil.description>Verwandelt das ausgewählte Gelände mit Dünger in Gedüngte Erde und pflügt es in ordentlichen Reihen, ideal für den Anbaue von Nutzpflanzen. Sofern nicht auf Fruchtbarer oder Nährstoffreicher Erde platziert, erfordert dies auch Dreck.</TilledSoil.description>
+
+  <Topsoil.label>Platziere Mutterboden</Topsoil.label>
+  <Topsoil.description>Platziere Mutterboden auf glattem Stein- oder Eisgelände, sodass dort Pflanzen angebaut werden können.</Topsoil.description>
+
+  <RichTopsoil.label>Gedüngter Mutterboden</RichTopsoil.label>
+  <RichTopsoil.description>Platziert Gedüngter Mutterboden auf glattem Stein- oder Eisgelände und düngt vorhandenen Mutterboden.</RichTopsoil.description>
+
+
+</LanguageData>
